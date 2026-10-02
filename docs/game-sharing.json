@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 2,
+  "title": "Gireesam's Great Escape",
+  "description": "A comic 2D street escape through Vizianagaram: collect reform funds, distract a creditor, and reach three safe houses.",
+  "defaultCaptions": {
+    "x": "Gireesam's Great Escape — arguments, market roofs, and a creditor in pursuit.",
+    "facebook": "English UI, original Gireesam character, three streets, and a very impatient creditor.",
+    "reddit": "A compact original 2D street-escape platformer set in a Vizianagaram-inspired town.",
+    "discord": "Gireesam's Great Escape: collect reform funds and talk your way to safety."
+  },
+  "assets": {
+    "og": "assets/share/gireesam_og.png",
+    "favicon": "assets/share/gireesam_favicon.png"
+  }
+}

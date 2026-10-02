@@ -1,0 +1,42 @@
+# Godot 4+ Editor and Cache
+.godot/
+*.translation
+
+# Node.js Dependencies & Logs
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build Outputs (Godot export target)
+dist/
+site/
+build/
+
+# Test Outputs & Captures
+test-output/
+game-captures/
+coverage/
+
+# Operating System Metadata
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs & Temporary Files
+*.log
+*.tmp
+
+# Environment Variables & Secrets
+.env
+.env.local
+.env.*.local
+
+# Generator scaffolding
+.manus-artifacts.json
+.manus-logs/

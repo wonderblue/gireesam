@@ -1,0 +1,24 @@
+{
+  "name": "gireesams-great-escape",
+  "version": "1.0.0",
+  "description": "A 2D comic platformer based on Gurajada Apparao's Kanyasulkam, built with Godot 4.7",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "serve": "python3 -m http.server 8080 --directory web-export",
+    "play": "python3 -m http.server 8080 --directory web-export",
+    "server:start": "npm --prefix server start",
+    "export": "mkdir -p dist && godot --headless --path . --export-release Web dist/index.html",
+    "verify-export": "node scripts/check-exported-pack.mjs",
+    "test": "godot --headless --path . -s test/smoke.gd",
+    "test:checks": "node --test test/exported-pack-profile.test.mjs test/loader-language.test.mjs",
+    "test:responsive": "godot --headless --path . --script test/responsive_layout.gd",
+    "test:audio": "node scripts/check-audio.mjs",
+    "test:terrain": "godot --headless --path . --script test/terrain_regression.gd",
+    "test:finish": "godot --headless --audio-driver Dummy --path . --script test/finish_regression.gd && godot --headless --audio-driver Dummy --path . --script test/player_grounding.gd",
+    "test:terrain-render": "godot --audio-driver Dummy --path . --script test/terrain_render.gd && godot --audio-driver Dummy --path . --script test/finish_render.gd && godot --audio-driver Dummy --path . --script test/player_grounding_render.gd",
+    "test:combat": "godot --headless --path . --script test/yarn_combat.gd",
+    "test:contract": "godot --headless --audio-driver Dummy --path . --script test/gameplay_contract.gd && godot --headless --audio-driver Dummy --path . --script test/ui_contract.gd && godot --headless --audio-driver Dummy --path . --script test/tweak_regression.gd && godot --headless --audio-driver Dummy --path . --script test/vfx_regression.gd",
+    "test:audio-completion": "godot --headless --audio-driver Dummy --path . --script test/audio_completion.gd"
+  }
+}

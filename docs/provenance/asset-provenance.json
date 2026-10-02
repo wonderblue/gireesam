@@ -1,0 +1,1523 @@
+{
+  "assets": {
+    "assets/audio/creditor_pursuit.mp3": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [
+        "scripts/audio_catalog.gd"
+      ],
+      "regions": [],
+      "sha256": "sha256:7021a456122921693f7151d8366cc68597bdf4f28320ddaad39abc63da1b1f31",
+      "shipped": true,
+      "size": 40586,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "scripts/audio_catalog.gd"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/audio/gireesam_creditor_chase.wav": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [
+        "scripts/audio_catalog.gd"
+      ],
+      "regions": [],
+      "sha256": "sha256:87711b7636f2e2d9f71f6d93de02e96749f26b52c284848d607860b6ef84eedc",
+      "shipped": true,
+      "size": 535724,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "scripts/audio_catalog.gd"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/audio/gireesam_satire_loop.mp3": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [
+        "scripts/audio_catalog.gd"
+      ],
+      "regions": [],
+      "sha256": "sha256:1981d954d5932f3dec409f05c3b493735aeae5cda32a5bbd547b8265e9365412",
+      "shipped": true,
+      "size": 1633319,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "scripts/audio_catalog.gd"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/audio/gireesam_snack_temptation.wav": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [
+        "scripts/audio_catalog.gd"
+      ],
+      "regions": [],
+      "sha256": "sha256:62a001fdfa01aae1a55dc9557eda57cdb2a96d3fddf71808daafefbb94bfbac5",
+      "shipped": true,
+      "size": 460844,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "scripts/audio_catalog.gd"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/audio/kanyasulkam_excerpt_01.wav": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [
+        "scripts/audio_catalog.gd"
+      ],
+      "regions": [],
+      "sha256": "sha256:612426b46945440f5c5d36e3d58916c72c2a5e0311acc4daf2055c547f48e616",
+      "shipped": true,
+      "size": 416684,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "scripts/audio_catalog.gd"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/gireesam/creditor_chaser.png": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [
+        "scripts/entities.gd"
+      ],
+      "regions": [],
+      "sha256": "sha256:7bcd1609cf1a93b12bdf474ec2a91c1208f52bfd606a45b3461872b1e2e3f948",
+      "shipped": true,
+      "size": 542412,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "scripts/entities.gd"
+      ],
+      "used": true,
+      "usedBy": [],
+      "versions": {
+        "sha256:11b7197be9b18d8fd651aef50b4ec08b56dc470cdfa3b59753d2a6c005b9ecf4": {
+          "generator": {},
+          "inputs": [],
+          "license": {},
+          "origin": "unknown",
+          "regions": [],
+          "sha256": "sha256:11b7197be9b18d8fd651aef50b4ec08b56dc470cdfa3b59753d2a6c005b9ecf4",
+          "size": 4456975,
+          "source": {},
+          "transformations": [],
+          "usedBy": []
+        }
+      }
+    },
+    "assets/gireesam/gireesam_player.png": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [
+        "scripts/game.gd",
+        "scripts/player.gd"
+      ],
+      "regions": [],
+      "sha256": "sha256:682b0bf49be220ab8306f7dcdd7eae5e2823731ca8a404d87c3168fe606770c0",
+      "shipped": true,
+      "size": 340822,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "scripts/game.gd",
+        "scripts/player.gd"
+      ],
+      "used": true,
+      "usedBy": [],
+      "versions": {
+        "sha256:753915d4924c9c3dc800bfc7593e9eb7813f576ad8366deaf47ed1013a919b5a": {
+          "generator": {},
+          "inputs": [],
+          "license": {},
+          "origin": "unknown",
+          "regions": [],
+          "sha256": "sha256:753915d4924c9c3dc800bfc7593e9eb7813f576ad8366deaf47ed1013a919b5a",
+          "size": 3461983,
+          "source": {},
+          "transformations": [],
+          "usedBy": []
+        }
+      }
+    },
+    "assets/share/gireesam_favicon.png": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [
+        "game-sharing.json",
+        "project.godot"
+      ],
+      "regions": [],
+      "sha256": "sha256:deecd8d43de103934c4a22d0e1636e40e83c0efb010c4d5a8222e0a8114e6184",
+      "shipped": true,
+      "size": 3395,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "game-sharing.json",
+        "project.godot"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/share/gireesam_og.png": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [
+        "game-sharing.json",
+        "scripts/title_screen.gd",
+        "scripts/world_art.gd"
+      ],
+      "regions": [],
+      "sha256": "sha256:468a9950e46cd47d83f8905883f8bb7ff85b79d6fa510d366b83c3e418c70359",
+      "shipped": true,
+      "size": 1670706,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "game-sharing.json",
+        "scripts/title_screen.gd",
+        "scripts/world_art.gd"
+      ],
+      "used": true,
+      "usedBy": [],
+      "versions": {
+        "sha256:2f5329372feefd3153202a39906449e6775cc12fb9685a3bf7a78d1ac8ec1ce1": {
+          "generator": {},
+          "inputs": [],
+          "license": {},
+          "origin": "unknown",
+          "regions": [],
+          "sha256": "sha256:2f5329372feefd3153202a39906449e6775cc12fb9685a3bf7a78d1ac8ec1ce1",
+          "size": 6249934,
+          "source": {},
+          "transformations": [],
+          "usedBy": []
+        }
+      }
+    },
+    "assets/template/audio/bgm.ogg": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:734f709706ddfb9870a4acbc937d786e0a5a43eaadbd4b6aa5e4e18b124c61db",
+      "shipped": true,
+      "size": 820738,
+      "source": {
+        "name": "Inherited supplied reference audio; original creation method unavailable",
+        "starterId": "game-platformer-v54",
+        "url": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/04/game-template/game-platformer/2026.09.04-felt-cat-50bf2384/734f709706ddfb9870a4acbc937d786e0a5a43eaadbd4b6aa5e4e18b124c61db/assets/template/audio/bgm.ogg"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/template/audio/checkpoint.ogg": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [
+        "scripts/audio_catalog.gd"
+      ],
+      "regions": [],
+      "sha256": "sha256:adc281ab8245e373f90296f6f81e1ac8d0eef4f05b8a23416d31907a64438f45",
+      "shipped": true,
+      "size": 11260,
+      "source": {
+        "name": "Inherited supplied reference audio; original creation method unavailable",
+        "starterId": "game-platformer-v54",
+        "url": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/04/game-template/game-platformer/2026.09.04-felt-cat-50bf2384/adc281ab8245e373f90296f6f81e1ac8d0eef4f05b8a23416d31907a64438f45/assets/template/audio/checkpoint.ogg"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "scripts/audio_catalog.gd"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/template/audio/coin.ogg": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [
+        "scripts/audio_catalog.gd"
+      ],
+      "regions": [],
+      "sha256": "sha256:4b7bf5ca36676a5ace18abcbe3b093c80573e6d91f27eff3d8dc1f4b3e275caa",
+      "shipped": true,
+      "size": 8251,
+      "source": {
+        "name": "Inherited supplied reference audio; original creation method unavailable",
+        "starterId": "game-platformer-v54",
+        "url": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/04/game-template/game-platformer/2026.09.04-felt-cat-50bf2384/4b7bf5ca36676a5ace18abcbe3b093c80573e6d91f27eff3d8dc1f4b3e275caa/assets/template/audio/coin.ogg"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "scripts/audio_catalog.gd"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/template/audio/confirm.ogg": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [
+        "scripts/audio_catalog.gd"
+      ],
+      "regions": [],
+      "sha256": "sha256:8cc32a6f4bb2758897b267a04a4481930bf5b958036f3b1b0725827278e99557",
+      "shipped": true,
+      "size": 7679,
+      "source": {
+        "name": "Inherited supplied reference audio; original creation method unavailable",
+        "starterId": "game-platformer-v54",
+        "url": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/04/game-template/game-platformer/2026.09.04-felt-cat-50bf2384/8cc32a6f4bb2758897b267a04a4481930bf5b958036f3b1b0725827278e99557/assets/template/audio/confirm.ogg"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "scripts/audio_catalog.gd"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/template/audio/death.ogg": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [
+        "scripts/audio_catalog.gd"
+      ],
+      "regions": [],
+      "sha256": "sha256:3399aad9cb9c4aa13930d53991c464875051dde9b89b555e04105a4bc3bad5cb",
+      "shipped": true,
+      "size": 8197,
+      "source": {
+        "name": "Inherited supplied reference audio; original creation method unavailable",
+        "starterId": "game-platformer-v54",
+        "url": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/04/game-template/game-platformer/2026.09.04-felt-cat-50bf2384/3399aad9cb9c4aa13930d53991c464875051dde9b89b555e04105a4bc3bad5cb/assets/template/audio/death.ogg"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "scripts/audio_catalog.gd"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/template/audio/jump.ogg": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [
+        "scripts/audio_catalog.gd"
+      ],
+      "regions": [],
+      "sha256": "sha256:5c2a77d137d1d20502f361b55f27cc1df7b3c9ecce6ae023a0812bcc96803e47",
+      "shipped": true,
+      "size": 7452,
+      "source": {
+        "name": "Inherited supplied reference audio; original creation method unavailable",
+        "starterId": "game-platformer-v54",
+        "url": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/04/game-template/game-platformer/2026.09.04-felt-cat-50bf2384/5c2a77d137d1d20502f361b55f27cc1df7b3c9ecce6ae023a0812bcc96803e47/assets/template/audio/jump.ogg"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "scripts/audio_catalog.gd"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/template/audio/land.ogg": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [
+        "scripts/audio_catalog.gd"
+      ],
+      "regions": [],
+      "sha256": "sha256:22ff4497b369053d3d2c92f4eb226678331f7c8c7ce2c5701a04c76743c812c3",
+      "shipped": true,
+      "size": 6934,
+      "source": {
+        "name": "Inherited supplied reference audio; original creation method unavailable",
+        "starterId": "game-platformer-v54",
+        "url": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/04/game-template/game-platformer/2026.09.04-felt-cat-50bf2384/22ff4497b369053d3d2c92f4eb226678331f7c8c7ce2c5701a04c76743c812c3/assets/template/audio/land.ogg"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "scripts/audio_catalog.gd"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/template/audio/stomp.ogg": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [
+        "scripts/audio_catalog.gd"
+      ],
+      "regions": [],
+      "sha256": "sha256:fa9859ac1b156ca58b85be6aecdc487173d71553763156d1876278b4aa240fc7",
+      "shipped": true,
+      "size": 7116,
+      "source": {
+        "name": "Inherited supplied reference audio; original creation method unavailable",
+        "starterId": "game-platformer-v54",
+        "url": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/04/game-template/game-platformer/2026.09.04-felt-cat-50bf2384/fa9859ac1b156ca58b85be6aecdc487173d71553763156d1876278b4aa240fc7/assets/template/audio/stomp.ogg"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "scripts/audio_catalog.gd"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/template/audio/success.ogg": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [
+        "scripts/audio_catalog.gd"
+      ],
+      "regions": [],
+      "sha256": "sha256:a9eb30ac3809077450f9b2c1692c12b1f8e31d55328d760e515af24009f00bc9",
+      "shipped": true,
+      "size": 15047,
+      "source": {
+        "name": "Inherited supplied reference audio; original creation method unavailable",
+        "starterId": "game-platformer-v54",
+        "url": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/04/game-template/game-platformer/2026.09.04-felt-cat-50bf2384/a9eb30ac3809077450f9b2c1692c12b1f8e31d55328d760e515af24009f00bc9/assets/template/audio/success.ogg"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "scripts/audio_catalog.gd"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/template/cat/cat-tree.webp": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [
+        "scripts/game.gd"
+      ],
+      "regions": [],
+      "sha256": "sha256:515928b048f99b77e537f104409a72f78d165a25a9543ed9303c3977d51c7ac5",
+      "shipped": true,
+      "size": 57196,
+      "source": {
+        "name": "Inherited reference asset; historical creation facts unavailable",
+        "starterId": "game-platformer-v54",
+        "url": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/04/game-template/game-platformer/2026.09.04-felt-cat-50bf2384/515928b048f99b77e537f104409a72f78d165a25a9543ed9303c3977d51c7ac5/assets/template/cat/cat-tree.webp"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "scripts/game.gd"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/template/cat/felt-ground.webp": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:4aed77d24b26cfa90382d5cc8cd1bb9f13d8c0ade839d84e7f283210aff60728",
+      "shipped": true,
+      "size": 32290,
+      "source": {
+        "name": "Inherited reference asset; historical creation facts unavailable",
+        "starterId": "game-platformer-v54",
+        "url": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/04/game-template/game-platformer/2026.09.04-felt-cat-50bf2384/4aed77d24b26cfa90382d5cc8cd1bb9f13d8c0ade839d84e7f283210aff60728/assets/template/cat/felt-ground.webp"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/template/cat/felt-special-block.webp": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [
+        "scripts/entities.gd"
+      ],
+      "regions": [],
+      "sha256": "sha256:0789f09f47ce76d3cc456b3fb2719e2f221aada9ba0cf4118d670af81cb840b5",
+      "shipped": true,
+      "size": 31098,
+      "source": {
+        "name": "Inherited reference asset; historical creation facts unavailable",
+        "starterId": "game-platformer-v54",
+        "url": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/04/game-template/game-platformer/2026.09.04-felt-cat-50bf2384/0789f09f47ce76d3cc456b3fb2719e2f221aada9ba0cf4118d670af81cb840b5/assets/template/cat/felt-special-block.webp"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "scripts/entities.gd"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/template/cat/fish.webp": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [
+        "scripts/entities.gd",
+        "scripts/felt_kit.gd"
+      ],
+      "regions": [],
+      "sha256": "sha256:8c0200ef461110e444db5403e16571783faf4e310d66a50a70858b4367e58e4b",
+      "shipped": true,
+      "size": 9242,
+      "source": {
+        "name": "Inherited reference asset; historical creation facts unavailable",
+        "starterId": "game-platformer-v54",
+        "url": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/04/game-template/game-platformer/2026.09.04-felt-cat-50bf2384/8c0200ef461110e444db5403e16571783faf4e310d66a50a70858b4367e58e4b/assets/template/cat/fish.webp"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "scripts/entities.gd",
+        "scripts/felt_kit.gd"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/template/cat/idle.webp": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:93cb6fd9452660c870555f64ee951b2e1bb098aadb988f996e88664eb4aa8235",
+      "shipped": true,
+      "size": 17738,
+      "source": {
+        "name": "Inherited reference asset; historical creation facts unavailable",
+        "starterId": "game-platformer-v54",
+        "url": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/04/game-template/game-platformer/2026.09.04-felt-cat-50bf2384/93cb6fd9452660c870555f64ee951b2e1bb098aadb988f996e88664eb4aa8235/assets/template/cat/idle.webp"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/template/cat/robot.webp": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:46e63b81112f624b4886b195ce917da464e795bb5a43db654ebe164eb1e7cbf6",
+      "shipped": true,
+      "size": 20310,
+      "source": {
+        "name": "Inherited reference asset; historical creation facts unavailable",
+        "starterId": "game-platformer-v54",
+        "url": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/04/game-template/game-platformer/2026.09.04-felt-cat-50bf2384/46e63b81112f624b4886b195ce917da464e795bb5a43db654ebe164eb1e7cbf6/assets/template/cat/robot.webp"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/template/cat/run/frame_00.webp": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:c2ed659b8398345727479980aee265c89a22e0a2d72e36e1a4db8e953dbf21a5",
+      "shipped": true,
+      "size": 17254,
+      "source": {
+        "name": "Inherited reference asset; historical creation facts unavailable",
+        "starterId": "game-platformer-v54",
+        "url": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/04/game-template/game-platformer/2026.09.04-felt-cat-50bf2384/c2ed659b8398345727479980aee265c89a22e0a2d72e36e1a4db8e953dbf21a5/assets/template/cat/run/frame_00.webp"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/template/cat/run/frame_01.webp": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:d1f5980b12fb7d46d0d72fe378c103b16e0de6b2e02a26684e946fde1fdeaa25",
+      "shipped": true,
+      "size": 16772,
+      "source": {
+        "name": "Inherited reference asset; historical creation facts unavailable",
+        "starterId": "game-platformer-v54",
+        "url": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/04/game-template/game-platformer/2026.09.04-felt-cat-50bf2384/d1f5980b12fb7d46d0d72fe378c103b16e0de6b2e02a26684e946fde1fdeaa25/assets/template/cat/run/frame_01.webp"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/template/cat/run/frame_02.webp": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:4c2221c53e044576ecb5e3750a193a4a1a47cd1f7951ebbabb98877511bc9062",
+      "shipped": true,
+      "size": 17190,
+      "source": {
+        "name": "Inherited reference asset; historical creation facts unavailable",
+        "starterId": "game-platformer-v54",
+        "url": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/04/game-template/game-platformer/2026.09.04-felt-cat-50bf2384/4c2221c53e044576ecb5e3750a193a4a1a47cd1f7951ebbabb98877511bc9062/assets/template/cat/run/frame_02.webp"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/template/cat/run/frame_03.webp": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:586b83c4ef53110bd4a734546ddda7bc36ec9bef048aff15cc3a43efd6738d8a",
+      "shipped": true,
+      "size": 17412,
+      "source": {
+        "name": "Inherited reference asset; historical creation facts unavailable",
+        "starterId": "game-platformer-v54",
+        "url": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/04/game-template/game-platformer/2026.09.04-felt-cat-50bf2384/586b83c4ef53110bd4a734546ddda7bc36ec9bef048aff15cc3a43efd6738d8a/assets/template/cat/run/frame_03.webp"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/template/cat/run/frame_04.webp": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:398685be197970fb95fbe10be466327e31fd278fa755b458742e85631c85202e",
+      "shipped": true,
+      "size": 17230,
+      "source": {
+        "name": "Inherited reference asset; historical creation facts unavailable",
+        "starterId": "game-platformer-v54",
+        "url": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/04/game-template/game-platformer/2026.09.04-felt-cat-50bf2384/398685be197970fb95fbe10be466327e31fd278fa755b458742e85631c85202e/assets/template/cat/run/frame_04.webp"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/template/cat/run/frame_05.webp": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:22fe2a0053089d812e81ae561549b455924923aef43befe1998d3b2a912bef26",
+      "shipped": true,
+      "size": 17542,
+      "source": {
+        "name": "Inherited reference asset; historical creation facts unavailable",
+        "starterId": "game-platformer-v54",
+        "url": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/04/game-template/game-platformer/2026.09.04-felt-cat-50bf2384/22fe2a0053089d812e81ae561549b455924923aef43befe1998d3b2a912bef26/assets/template/cat/run/frame_05.webp"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/template/cat/run/frame_06.webp": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:195e24cec14deb60cc62901e710e0e3754eec0996affe4f4121b2ed218cf7fb8",
+      "shipped": true,
+      "size": 17276,
+      "source": {
+        "name": "Inherited reference asset; historical creation facts unavailable",
+        "starterId": "game-platformer-v54",
+        "url": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/04/game-template/game-platformer/2026.09.04-felt-cat-50bf2384/195e24cec14deb60cc62901e710e0e3754eec0996affe4f4121b2ed218cf7fb8/assets/template/cat/run/frame_06.webp"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/template/cat/run/frame_07.webp": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:f4308999eb7c5343f30082ae752f4a9dd2aa90cfba08ef5eb111206287500bb3",
+      "shipped": true,
+      "size": 17718,
+      "source": {
+        "name": "Inherited reference asset; historical creation facts unavailable",
+        "starterId": "game-platformer-v54",
+        "url": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/04/game-template/game-platformer/2026.09.04-felt-cat-50bf2384/f4308999eb7c5343f30082ae752f4a9dd2aa90cfba08ef5eb111206287500bb3/assets/template/cat/run/frame_07.webp"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/template/cat/run/frame_08.webp": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:3d7eabd34898aee7b11abe67bee0a836dc387fc8422e7077ab98417e52046e1b",
+      "shipped": true,
+      "size": 17626,
+      "source": {
+        "name": "Inherited reference asset; historical creation facts unavailable",
+        "starterId": "game-platformer-v54",
+        "url": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/04/game-template/game-platformer/2026.09.04-felt-cat-50bf2384/3d7eabd34898aee7b11abe67bee0a836dc387fc8422e7077ab98417e52046e1b/assets/template/cat/run/frame_08.webp"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/template/cat/run/frame_09.webp": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:692444371f9ce7746fcde23f9924d86d8db3ed576a8c33193f3eea2ddb88ca59",
+      "shipped": true,
+      "size": 18034,
+      "source": {
+        "name": "Inherited reference asset; historical creation facts unavailable",
+        "starterId": "game-platformer-v54",
+        "url": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/04/game-template/game-platformer/2026.09.04-felt-cat-50bf2384/692444371f9ce7746fcde23f9924d86d8db3ed576a8c33193f3eea2ddb88ca59/assets/template/cat/run/frame_09.webp"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/template/cat/run/frame_10.webp": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:e121065730a536c0dc340927bd39b58882702e1adf728a42b9fa47bf25cd92c9",
+      "shipped": true,
+      "size": 17716,
+      "source": {
+        "name": "Inherited reference asset; historical creation facts unavailable",
+        "starterId": "game-platformer-v54",
+        "url": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/04/game-template/game-platformer/2026.09.04-felt-cat-50bf2384/e121065730a536c0dc340927bd39b58882702e1adf728a42b9fa47bf25cd92c9/assets/template/cat/run/frame_10.webp"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/template/cat/run/frame_11.webp": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:cd04699c43646c9489f3b6f7900f53bfc40e30c1111ff359fa5513be7b8ccbd0",
+      "shipped": true,
+      "size": 17264,
+      "source": {
+        "name": "Inherited reference asset; historical creation facts unavailable",
+        "starterId": "game-platformer-v54",
+        "url": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/04/game-template/game-platformer/2026.09.04-felt-cat-50bf2384/cd04699c43646c9489f3b6f7900f53bfc40e30c1111ff359fa5513be7b8ccbd0/assets/template/cat/run/frame_11.webp"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/template/cat/run/frame_12.webp": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:3766cc02f5e51b035e30c06b7470fe23247e29467f23e30b7aa1a4a79bece09a",
+      "shipped": true,
+      "size": 17018,
+      "source": {
+        "name": "Inherited reference asset; historical creation facts unavailable",
+        "starterId": "game-platformer-v54",
+        "url": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/04/game-template/game-platformer/2026.09.04-felt-cat-50bf2384/3766cc02f5e51b035e30c06b7470fe23247e29467f23e30b7aa1a4a79bece09a/assets/template/cat/run/frame_12.webp"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/template/cat/run/frame_13.webp": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:555da0e5f3e8172cec7349378e36ff93d5ae83d051627bb82db6e7b1868be17d",
+      "shipped": true,
+      "size": 17304,
+      "source": {
+        "name": "Inherited reference asset; historical creation facts unavailable",
+        "starterId": "game-platformer-v54",
+        "url": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/04/game-template/game-platformer/2026.09.04-felt-cat-50bf2384/555da0e5f3e8172cec7349378e36ff93d5ae83d051627bb82db6e7b1868be17d/assets/template/cat/run/frame_13.webp"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/template/cat/run/frame_14.webp": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:1e8c15a52ce78f1540844a023d4560750c4be470be2de5a4248c67debcd3195c",
+      "shipped": true,
+      "size": 16936,
+      "source": {
+        "name": "Inherited reference asset; historical creation facts unavailable",
+        "starterId": "game-platformer-v54",
+        "url": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/04/game-template/game-platformer/2026.09.04-felt-cat-50bf2384/1e8c15a52ce78f1540844a023d4560750c4be470be2de5a4248c67debcd3195c/assets/template/cat/run/frame_14.webp"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/template/cat/run/frame_15.webp": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:149587bab78cbaadad8bb70270aa4682d954ad8b8f3433ca2d2f2165ae66a164",
+      "shipped": true,
+      "size": 17436,
+      "source": {
+        "name": "Inherited reference asset; historical creation facts unavailable",
+        "starterId": "game-platformer-v54",
+        "url": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/04/game-template/game-platformer/2026.09.04-felt-cat-50bf2384/149587bab78cbaadad8bb70270aa4682d954ad8b8f3433ca2d2f2165ae66a164/assets/template/cat/run/frame_15.webp"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/template/cat/run/frame_16.webp": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:b3ed5880a872cf499ae2c2f558aa95d5d48abf28bf9dcd2f7f1453da56d671b6",
+      "shipped": true,
+      "size": 17408,
+      "source": {
+        "name": "Inherited reference asset; historical creation facts unavailable",
+        "starterId": "game-platformer-v54",
+        "url": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/04/game-template/game-platformer/2026.09.04-felt-cat-50bf2384/b3ed5880a872cf499ae2c2f558aa95d5d48abf28bf9dcd2f7f1453da56d671b6/assets/template/cat/run/frame_16.webp"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/template/cat/run/frame_17.webp": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:46070f3c36b836557f10804b10a1da707f4d1a7bfc2b05db58706c229dc7274b",
+      "shipped": true,
+      "size": 18048,
+      "source": {
+        "name": "Inherited reference asset; historical creation facts unavailable",
+        "starterId": "game-platformer-v54",
+        "url": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/04/game-template/game-platformer/2026.09.04-felt-cat-50bf2384/46070f3c36b836557f10804b10a1da707f4d1a7bfc2b05db58706c229dc7274b/assets/template/cat/run/frame_17.webp"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/template/cat/title-key-art.webp": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:0ec03d9ffc163b1892de765d597a129bcbe6d59456741810fc3537c936e96a82",
+      "shipped": true,
+      "size": 799086,
+      "source": {
+        "name": "Inherited reference asset; historical creation facts unavailable",
+        "starterId": "game-platformer-v54",
+        "url": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/04/game-template/game-platformer/2026.09.04-felt-cat-50bf2384/0ec03d9ffc163b1892de765d597a129bcbe6d59456741810fc3537c936e96a82/assets/template/cat/title-key-art.webp"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/template/cat/warm-background.webp": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [
+        "scripts/title_screen.gd"
+      ],
+      "regions": [],
+      "sha256": "sha256:57aff204fa6adfa090d23d58d99420cf3c7400cb71f14ddb6a400f9a10721db6",
+      "shipped": true,
+      "size": 646060,
+      "source": {
+        "name": "Inherited reference asset; historical creation facts unavailable",
+        "starterId": "game-platformer-v54",
+        "url": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/04/game-template/game-platformer/2026.09.04-felt-cat-50bf2384/57aff204fa6adfa090d23d58d99420cf3c7400cb71f14ddb6a400f9a10721db6/assets/template/cat/warm-background.webp"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "scripts/title_screen.gd"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/template/cat/yarn.webp": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [
+        "scripts/felt_kit.gd",
+        "scripts/yarn_ball.gd"
+      ],
+      "regions": [],
+      "sha256": "sha256:4fea03a824c148180a794f21bfa974ab1221e4ee0ceb797b64613b6f799a38f3",
+      "shipped": true,
+      "size": 12196,
+      "source": {
+        "name": "Inherited reference asset; historical creation facts unavailable",
+        "starterId": "game-platformer-v54",
+        "url": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/04/game-template/game-platformer/2026.09.04-felt-cat-50bf2384/4fea03a824c148180a794f21bfa974ab1221e4ee0ceb797b64613b6f799a38f3/assets/template/cat/yarn.webp"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "scripts/felt_kit.gd",
+        "scripts/yarn_ball.gd"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/template/fonts/NotoSansSC-VF.subset.woff2": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {
+        "id": "OFL-1.1",
+        "url": "https://openfontlicense.org/open-font-license-official-text/"
+      },
+      "origin": "template",
+      "referenceEvidence": [
+        "assets/template/fonts/noto_sans_sc_bold.tres",
+        "assets/template/fonts/noto_sans_sc_medium.tres",
+        "assets/template/fonts/noto_sans_sc_regular.tres"
+      ],
+      "regions": [],
+      "sha256": "sha256:38f4c5f927f746b3dfa4c3a5d7edf0b7a3e828e27438418fa54f9e1565289412",
+      "shipped": true,
+      "size": 1869368,
+      "source": {
+        "name": "NotoSansSC-VF.subset.woff2",
+        "starterId": "game-platformer-v60"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "assets/template/fonts/noto_sans_sc_bold.tres",
+        "assets/template/fonts/noto_sans_sc_medium.tres",
+        "assets/template/fonts/noto_sans_sc_regular.tres"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/template/fonts/Nunito-VF.subset.woff2": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [
+        "assets/template/fonts/ui_bold.tres",
+        "assets/template/fonts/ui_medium.tres",
+        "assets/template/fonts/ui_regular.tres"
+      ],
+      "regions": [],
+      "sha256": "sha256:b9b7ee104781deff4c3cb7c17f85f2cc73afd2683820e299eaec7a31fdbe24bb",
+      "shipped": true,
+      "size": 49276,
+      "source": {
+        "starterId": "game-platformer-v60"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "assets/template/fonts/ui_bold.tres",
+        "assets/template/fonts/ui_medium.tres",
+        "assets/template/fonts/ui_regular.tres"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/template/fonts/display/Baloo2-VF.subset.woff2": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [
+        "assets/template/fonts/display/display_heading.tres",
+        "assets/template/fonts/display/display_small.tres",
+        "assets/template/fonts/display/display_title.tres"
+      ],
+      "regions": [],
+      "sha256": "sha256:78488d8ed3c08e5431d8cbd30f2caaed85877c0b1594bd5bed4fbd1182b125ee",
+      "shipped": true,
+      "size": 43872,
+      "source": {
+        "starterId": "game-platformer-v60"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "assets/template/fonts/display/display_heading.tres",
+        "assets/template/fonts/display/display_small.tres",
+        "assets/template/fonts/display/display_title.tres"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/template/fonts/display/ZCOOLQingKeHuangYou-Regular.subset.woff2": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [
+        "assets/template/fonts/display/display_heading.tres",
+        "assets/template/fonts/display/display_title.tres"
+      ],
+      "regions": [],
+      "sha256": "sha256:7358992690863400c1097f04d705a806e180f333c0b625d9f377a6567cc003e4",
+      "shipped": true,
+      "size": 1620420,
+      "source": {
+        "starterId": "game-platformer-v60"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "assets/template/fonts/display/display_heading.tres",
+        "assets/template/fonts/display/display_title.tres"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/template/generated/foliage_near.webp": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [
+        "scripts/world_art.gd"
+      ],
+      "regions": [],
+      "sha256": "sha256:fdec1fb885bc7c8ec2c0e40cf434f3150b739acca0f89956c5c6099dfa3ba864",
+      "shipped": true,
+      "size": 120604,
+      "source": {
+        "name": "Inherited reference asset; historical creation facts unavailable",
+        "starterId": "game-platformer-v54",
+        "url": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/04/game-template/game-platformer/2026.09.04-felt-cat-50bf2384/fdec1fb885bc7c8ec2c0e40cf434f3150b739acca0f89956c5c6099dfa3ba864/assets/template/generated/foliage_near.webp"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "scripts/world_art.gd"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/template/ui/loading-background.png": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [
+        "project.godot"
+      ],
+      "regions": [],
+      "sha256": "sha256:3b4b158f93a3e6fc6f866f1b121f106b8e178b2a68a44a2c1dba46cc4c76947e",
+      "shipped": true,
+      "size": 540732,
+      "source": {
+        "starterId": "game-platformer-v60"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "project.godot"
+      ],
+      "used": true,
+      "usedBy": []
+    }
+  },
+  "discoveries": {},
+  "downloads": {},
+  "export": {
+    "coverage": "verified",
+    "hostMedia": [
+      {
+        "contentMatches": [],
+        "path": "index.apple-touch-icon.png",
+        "sha256": "sha256:91bee75988b68b20027fca9905fa75d6bcd389bf5f5b2d9be301e73978b7f256",
+        "size": 16106,
+        "sourcePaths": []
+      },
+      {
+        "contentMatches": [],
+        "path": "index.icon.png",
+        "sha256": "sha256:5772c7688b475d7e6494add55af2b00a0a8832bba96066d42d6b9646935ee612",
+        "size": 3411,
+        "sourcePaths": []
+      },
+      {
+        "contentMatches": [],
+        "path": "index.png",
+        "sha256": "sha256:c8f02392ee13709b5ad038608e2f50d5e7dbacc6e4466b67dbfc5021e8dc8c91",
+        "size": 1286708,
+        "sourcePaths": []
+      }
+    ],
+    "pckSha256": "sha256:156decddacef84c0dc506307730308474f0e4bc6b9a582a8840c7bf3419d718e",
+    "profile": "release",
+    "sourceFingerprint": "sha256:789d5bad2e95bddbae5e4c0fb0d0e6b47498f35ebaafdaf9821a79ca880560a1"
+  },
+  "procedures": {},
+  "summary": {
+    "ancestry": {
+      "ai": {
+        "retained": 0,
+        "shipped": 0,
+        "used": 0
+      },
+      "catalog": {
+        "retained": 0,
+        "shipped": 0,
+        "used": 0
+      },
+      "procedural": {
+        "retained": 0,
+        "shipped": 0,
+        "used": 0
+      }
+    },
+    "derivatives": {
+      "retained": 0,
+      "shipped": 0,
+      "used": 0
+    },
+    "exportedHostMedia": {
+      "paths": 3,
+      "uniqueHashes": 3,
+      "unmatchedSourcePaths": 3
+    },
+    "files": {
+      "downloaded": 0,
+      "retained": 51,
+      "shipped": 51,
+      "used": 28
+    },
+    "origins": {
+      "ai": {
+        "retained": 0,
+        "shipped": 0,
+        "used": 0
+      },
+      "catalog": {
+        "retained": 0,
+        "shipped": 0,
+        "used": 0
+      },
+      "derivative": {
+        "retained": 0,
+        "shipped": 0,
+        "used": 0
+      },
+      "external": {
+        "retained": 0,
+        "shipped": 0,
+        "used": 0
+      },
+      "procedural": {
+        "retained": 0,
+        "shipped": 0,
+        "used": 0
+      },
+      "template": {
+        "retained": 42,
+        "shipped": 42,
+        "used": 19
+      },
+      "unknown": {
+        "retained": 9,
+        "shipped": 9,
+        "used": 9
+      }
+    },
+    "packs": {
+      "discovered": 0,
+      "downloaded": 0,
+      "shipped": 0,
+      "used": 0
+    },
+    "proceduralSystems": {
+      "retained": 0,
+      "used": 0
+    },
+    "spriteRegions": {
+      "retained": 0,
+      "shipped": 0,
+      "used": 0
+    },
+    "visualCoverage": {
+      "approvedRevision": 3,
+      "blueprintId": "gbp_d411097f472ba6bf44fa4596",
+      "committedRoles": 8,
+      "expectedDigest": "0b19cbd83c7e772c2236f1833569faf8adb581824109a01eb7b167f7344952b0",
+      "fulfilledRoles": 0,
+      "roles": [
+        {
+          "id": "gireesam_player",
+          "reasons": [
+            "unresolved"
+          ],
+          "status": "unresolved"
+        },
+        {
+          "id": "creditor_chaser",
+          "reasons": [
+            "unresolved"
+          ],
+          "status": "unresolved"
+        },
+        {
+          "id": "town_route_kit",
+          "reasons": [
+            "unresolved"
+          ],
+          "status": "unresolved"
+        },
+        {
+          "id": "reform_fund_collectible",
+          "reasons": [
+            "unresolved"
+          ],
+          "status": "unresolved"
+        },
+        {
+          "id": "safe_house_checkpoint",
+          "reasons": [
+            "unresolved"
+          ],
+          "status": "unresolved"
+        },
+        {
+          "id": "dialogue_characters",
+          "reasons": [
+            "unresolved"
+          ],
+          "status": "unresolved"
+        },
+        {
+          "id": "gameplay_hazards",
+          "reasons": [
+            "unresolved"
+          ],
+          "status": "unresolved"
+        },
+        {
+          "id": "telugu_interface_frames",
+          "reasons": [
+            "unresolved"
+          ],
+          "status": "unresolved"
+        }
+      ],
+      "search": {
+        "checkedPages": 0,
+        "outcomes": 0,
+        "overflowEvents": 0,
+        "requests": 0
+      },
+      "selectedButUnusedAssets": [],
+      "staleRenderedEvidence": [],
+      "status": "incomplete",
+      "unexplainedFallbacks": [],
+      "unresolvedRoles": [
+        "gireesam_player",
+        "creditor_chaser",
+        "town_route_kit",
+        "reform_fund_collectible",
+        "safe_house_checkpoint",
+        "dialogue_characters",
+        "gameplay_hazards",
+        "telugu_interface_frames"
+      ],
+      "visualQuality": "requires_agent_review"
+    }
+  },
+  "version": 1,
+  "visualCoverage": {
+    "attempts": {},
+    "expected": {
+      "approvedRevision": 3,
+      "blueprintId": "gbp_d411097f472ba6bf44fa4596",
+      "digest": "0b19cbd83c7e772c2236f1833569faf8adb581824109a01eb7b167f7344952b0",
+      "roles": [
+        {
+          "description": "Your playable comic fraudster needs a distinctive, expressive 2D silhouette and readable run, jump, fall, landing, hurt, and dialogue poses suited to side-view platforming.",
+          "id": "gireesam_player",
+          "label": "Gireesam player character"
+        },
+        {
+          "description": "Your pursuing creditor needs a clearly different 2D silhouette with readable chase, obstacle-crossing, attack or catch, setback, and reaction animation states.",
+          "id": "creditor_chaser",
+          "label": "Comic creditor chaser"
+        },
+        {
+          "description": "Your three short stages need readable side-view rooftops, ledges, market stalls, and route boundaries in warm dusk colors, with traversable surfaces clearly separated from background scenery.",
+          "id": "town_route_kit",
+          "label": "Vizianagaram-inspired route kit"
+        },
+        {
+          "description": "Your collectible coins need a prominent 2D pickup silhouette, a simple attention-catching animation, and space for the Telugu label to remain legible without obscuring play.",
+          "id": "reform_fund_collectible",
+          "label": "“సంస్కరణ నిధి” collectible"
+        },
+        {
+          "description": "Your stage destination needs a recognizable 2D safe-house entrance or marker with inactive, active, and reached states that remain visible against the town palette.",
+          "id": "safe_house_checkpoint",
+          "label": "Safe house and checkpoint goal"
+        },
+        {
+          "description": "Your Telugu choice moments need expressive 2D portraits or staged character poses for Gireesam, the creditor, and only the recurring townspeople required by the authored dialogue, showing manipulation and visible consequences.",
+          "id": "dialogue_characters",
+          "label": "Dialogue character reactions"
+        },
+        {
+          "description": "Your rooftop and market routes need only the hazard visuals required by the authored stages, with clear silhouettes and warning, active, and impact states.",
+          "id": "gameplay_hazards",
+          "label": "Readable route hazards"
+        },
+        {
+          "description": "Your compact interface needs readable hand-painted frames for coins, “ఆబోరు” reputation, objectives, choices, pause, and outcomes while leaving all Telugu typography crisp and unobstructed.",
+          "id": "telugu_interface_frames",
+          "label": "Telugu HUD and dialogue frames"
+        }
+      ]
+    },
+    "overflowEvents": 0,
+    "resolutions": {},
+    "version": 1
+  }
+}
