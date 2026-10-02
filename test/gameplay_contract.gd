@@ -86,6 +86,7 @@ func _run() -> void:
 	_check(not game.tutorial.active, "Retry replayed dismissed tutorial")
 	for frame in 32: await process_frame
 	_check(root.get_node("GameAudio").music.playing, "Retry failed to resume the music lifecycle")
+	_test_checkpoint_dialogue(game)
 	store.data = original
 	store.save()
 	game.queue_free()
@@ -202,6 +203,36 @@ func _test_tutorial(game: Node, store: Node) -> void:
 	game.tutorial.begin()
 	_check(game.tutorial.active and game.tutorial.step == 0, "explicit tutorial replay failed")
 	game.tutorial.skip()
+
+func _test_checkpoint_dialogue(game: Node) -> void:
+	var original_reputation: int = game.reputation
+	var original_time_left: float = game.time_left
+	var dialogue: Dictionary = game._dialogue_data(1)
+	var choices: Array = dialogue.choices
+	var flattery: Dictionary = choices[0]
+	var candor: Dictionary = choices[1]
+	_check(int(flattery.delta) == -2 and not flattery.has("time_bonus"), "flattering dodge is not the weaker checkpoint choice")
+	_check(int(candor.delta) == 9 and is_equal_approx(float(candor.time_bonus), 5.0), "candid repayment plan has exact reputation/time rewards")
+	game.reputation = 50
+	game.time_left = 75.0
+	var flattery_layer := CanvasLayer.new()
+	game.add_child(flattery_layer)
+	game.dialogue_layer = flattery_layer
+	game._choose_dialogue(1, 0)
+	_check(game.reputation == 48 and is_equal_approx(game.time_left, 75.0), "flattery loses reputation and grants no time")
+	var candor_layer := CanvasLayer.new()
+	game.add_child(candor_layer)
+	game.dialogue_layer = candor_layer
+	game._choose_dialogue(1, 1)
+	_check(game.reputation == 57 and is_equal_approx(game.time_left, 80.0), "candor improves reputation and restores five seconds")
+	game.time_left = 94.0
+	var capped_layer := CanvasLayer.new()
+	game.add_child(capped_layer)
+	game.dialogue_layer = capped_layer
+	game._choose_dialogue(1, 1)
+	_check(is_equal_approx(game.time_left, 95.0), "shortcut bonus does not exceed the Stage 2 timer cap")
+	game.reputation = original_reputation
+	game.time_left = original_time_left
 
 func _check(condition: bool, message: String) -> void:
 	if not condition:
