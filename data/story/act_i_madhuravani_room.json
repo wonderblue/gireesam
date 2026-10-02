@@ -1,0 +1,92 @@
+{
+  "id": "act_i_madhuravani_room",
+  "name_key": "stage.act_i.madhuravani_room.name",
+  "world_width": 3400,
+  "spawn": [160, 540],
+  "goal": [3270, 600],
+  "checkpoint": [160, 540],
+  "grounds": [
+    [[0, 620], [3400, 150]]
+  ],
+  "platforms": [
+    [[700, 500], [230, 28]],
+    [[1360, 490], [220, 28]],
+    [[2450, 500], [250, 28]]
+  ],
+  "trees": [],
+  "blocks": [],
+  "fish": [],
+  "enemies": [],
+  "required_fish": 0,
+  "story_beats": [
+    {
+      "id": "room_arrival",
+      "x": 470,
+      "marker": "DEBTS AND BOUNDARIES",
+      "title": "MADHURAVANI'S ROOM · TERMS AND MONEY",
+      "line": "Madhuravani questions Ramappantulu's financial terms and rejects his unwanted touch. A promised payment cannot buy consent or erase her prior commitments.",
+      "choices": ["Listen as Madhuravani questions the arrangement", "Stay back while she states her boundary"],
+      "response": "Her boundary is hers; the scene does not turn it into a puzzle for a man to solve."
+    },
+    {
+      "id": "room_cash_offer",
+      "x": 840,
+      "marker": "THE 200-RUPEE OFFER",
+      "title": "A MONEY OFFER, NOT A PURCHASE",
+      "line": "Ramappantulu offers two hundred rupees toward the debts Madhuravani names. After he again reaches for her, she refuses both the touch and the money. The visible notes stage this witnessed exchange; they are not a source ledger or receipt.",
+      "choices": ["Record the witnessed 200-rupee offer and refusal", "Leave the private exchange unrecorded"],
+      "choice_responses": [
+        "A neutral case note records only the offered amount and her refusal. Madhuravani may review it; it grants nobody leverage.",
+        "No shared evidence-review stop opens. Madhuravani's boundary and access to the room remain unchanged."
+      ],
+      "response": "The evidence action does not award money, status, intimacy, or control."
+    },
+    {
+      "id": "room_evidence_review",
+      "x": 1080,
+      "marker": "OPTIONAL TERMS REVIEW",
+      "title": "MADHURAVANI REVIEWS THE NOTE",
+      "line": "The recorded note opens this optional review. Madhuravani decides whether the amount matters to her terms; the note documents the witnessed offer and refusal, not a new financial claim.",
+      "choices": ["Let her make the connection herself", "Wait while she decides on her own"],
+      "response": "Her financial judgment stays with Madhuravani; the optional review is access to context, not a reward.",
+      "requires_recorded_offer": true
+    },
+    {
+      "id": "room_ramappantulu_hides",
+      "x": 1390,
+      "marker": "RAMAPPAANTULU UNDER THE BED",
+      "title": "THE FIRST MAN HIDES",
+      "line": "When Gireesam calls from outside, Ramappantulu ducks under the bed before Gireesam enters. His panic is the visual joke; Madhuravani and Pootakullamma are not its targets.",
+      "choices": ["Continue toward the room"],
+      "response": "Ramappantulu is already hiding when Gireesam arrives."
+    },
+    {
+      "id": "room_hyderabad_hide",
+      "x": 1770,
+      "marker": "GIREESAM'S HYDERABAD STORY",
+      "title": "AN APPOINTMENT THAT DOES NOT EXIST",
+      "line": "Gireesam invents a Hyderabad appointment and asks Madhuravani to go with him. She refuses. As Pootakullamma approaches, Gireesam hides under the bed where Ramappantulu is already concealed.",
+      "choices": ["Hide under the bed while the search passes"],
+      "response": "Two men have chosen the hiding place; the room still belongs to its occupants.",
+      "stealth": true
+    },
+    {
+      "id": "room_search_accident",
+      "x": 1770,
+      "marker": "BROOM SEARCH",
+      "title": "THE BROOM FINDS RAMAPPAANTULU",
+      "line": "Pootakullamma searches for Gireesam and accidentally strikes the already-hidden Ramappantulu. Gireesam then slips out and knocks Ramappantulu while escaping. The farce exposes the men's conduct; no woman or Subbi is hit or mocked.",
+      "choices": ["Wait for the commotion to settle"],
+      "response": "Pootakullamma is not the punchline, and the game grants no reward for deceiving or controlling Madhuravani."
+    },
+    {
+      "id": "room_madhuravani_terms",
+      "x": 2590,
+      "marker": "MADHURAVANI'S TERMS",
+      "title": "THE LAST WORD IS HERS",
+      "line": "This adaptation closes on Madhuravani stating the terms she chooses for her own relationships. The ending is a deliberate agency-focused framing, not a quotation and not a Gireesam-wins-her outcome.",
+      "choices": ["Listen while she sets the terms", "Leave the terms in her hands"],
+      "response": "Act I ends with Madhuravani defining her terms. No one earns a reward for deceit or coercion."
+    }
+  ]
+}

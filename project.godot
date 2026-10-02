@@ -105,6 +105,10 @@ attack={
 ]
 }
 
+interact={
+"deadzone": 0.3,
+"events": [Object(InputEventKey,"physical_keycode":69), Object(InputEventJoypadButton,"button_index":3)]
+}
 skip_tutorial={
 "deadzone": 0.3,
 "events": [Object(InputEventKey,"physical_keycode":75), Object(InputEventJoypadButton,"button_index":4)]

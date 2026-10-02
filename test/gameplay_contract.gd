@@ -45,6 +45,13 @@ func _run() -> void:
 	game.next_stage()
 	await process_frame
 	_check(game.stage.id == "lofty_lounge" and not game.finished, "second stage route")
+	var stage_two_entry_time: float = game.time_left
+	_check(stage_two_entry_time > 95.0 and stage_two_entry_time <= 180.0, "Stage 2 transition starts above its 95-second checkpoint cap and at/below 180")
+	var honest_choice_layer := CanvasLayer.new()
+	game.add_child(honest_choice_layer)
+	game.dialogue_layer = honest_choice_layer
+	game._choose_dialogue(1, 1)
+	_check(is_equal_approx(game.time_left, stage_two_entry_time + 5.0), "honest Stage 2 choice grants five seconds without clamping an over-cap timer down to 95")
 	_check(game.coins == 0 and game.score == stage_clear_score, "stage transition preserves run score, resets objective")
 	_check(get_nodes_in_group("player").size() == 1, "stage transition duplicated player")
 	game._on_goal_reached()
