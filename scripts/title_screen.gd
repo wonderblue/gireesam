@@ -219,11 +219,12 @@ func build_ui() -> void:
 	actions.add_theme_constant_override("h_separation", 4)
 	actions.add_theme_constant_override("v_separation", 2)
 	body.add_child(actions)
-	var badges := [FeltKit.MUSTARD, FeltKit.TEAL, FeltKit.ROSE, Color("#7a4128")]
-	var pairs := [["title.leaderboard", _open_leaderboard], ["settings.title", _open_settings], ["title.tutorial", _replay_tutorial], ["account.title", _open_account]]
+	var badges := [FeltKit.MUSTARD, FeltKit.TEAL, FeltKit.ROSE, Color("#7a4128"), Color("#9b5d48")]
+	var pairs := [["title.leaderboard", _open_leaderboard], ["settings.title", _open_settings], ["title.tutorial", _replay_tutorial], ["account.title", _open_account], ["title.story_act_i", start_story]]
 	for index in pairs.size():
 		var pair: Array = pairs[index]
 		var button := _button(pair[0], pair[1])
+		if pair[0] == "title.story_act_i": button.name = "StoryActIButton"
 		STYLE.menu_item(button)
 		button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		button.custom_minimum_size.y = 44
@@ -543,6 +544,12 @@ func _replay_tutorial() -> void:
 	start_game()
 
 func start_game() -> void:
+	_launch_game("res://scenes/game.tscn")
+
+func start_story() -> void:
+	_launch_game("res://scenes/story_game.tscn")
+
+func _launch_game(scene_path: String) -> void:
 	if starting or get_tree().paused or is_instance_valid(_modal): return
 	if not SaveStore.set_player_name(_name_entry.text):
 		_name_error.text = I18n.t("profile.invalid" if not SaveStore.valid_player_name(_name_entry.text) else "profile.save_failed")
@@ -552,7 +559,7 @@ func start_game() -> void:
 		return
 	starting = true
 	GameAudio.begin_game()
-	get_tree().change_scene_to_file("res://scenes/game.tscn")
+	get_tree().change_scene_to_file(scene_path)
 
 func _unhandled_input(event: InputEvent) -> void:
 	if get_tree().paused: return

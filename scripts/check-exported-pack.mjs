@@ -52,6 +52,7 @@ writeFileSync(
 
 const checks = [
   [contentsProbe, '[PCK_CONTENTS_PASS]'],
+  [resolve(projectRoot, 'test/act_i_story_contract.gd'), '[ACT_I_STORY_PASS]'],
   [resolve(projectRoot, 'test/exported_pack_boot.gd'), '[PCK_BOOT_PASS]'],
   [resolve(projectRoot, 'test/audio_idle_regression.gd'), '[AUDIO_IDLE_PASS]'],
   [resolve(projectRoot, 'test/terrain_regression.gd'), '[TERRAIN_PASS]'],
