@@ -73,7 +73,7 @@ python3 -m http.server 8080 --directory web-export
 
 ## 📚 Story adaptations
 
-The title screen keeps the standard escape campaign and separate **PLAY ACT I · STORY**, **PLAY ACT II**, and **PLAY ACT III** routes. Act III is one compact, English-language route through four source locations, centered on Madhuravani's reading of claims against conduct; Gireesam's courtship of Buchchamma remains self-serving and unrewarded. See [`docs/ACT_II_ADAPTATION.md`](./docs/ACT_II_ADAPTATION.md) and [`docs/ACT_III_ADAPTATION.md`](./docs/ACT_III_ADAPTATION.md) for their distinct source-witness and adaptation notes.
+The title screen keeps the standard escape campaign and separate **PLAY ACT I · STORY**, **PLAY ACT II**, **PLAY ACT III**, and **PLAY ACT IV** routes. Act III remains a compact route through four source locations. Act IV is a compact, English-language three-stop episode that audits a forged letter, follows the wedding bargaining, and frames Gireesam's pressured elopement pitch without rewarding it as romance. See the distinct [Act II](./docs/ACT_II_ADAPTATION.md), [Act III](./docs/ACT_III_ADAPTATION.md), and [Act IV](./docs/ACT_IV_ADAPTATION.md) source-witness and adaptation notes.
 
 ---
 

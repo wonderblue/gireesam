@@ -1,0 +1,63 @@
+{
+  "id": "act_iv_letter_audit",
+  "act": "IV",
+  "name_key": "stage.act_iv.route.name",
+  "world_width": 3000,
+  "spawn": [160, 540],
+  "goal": [2890, 600],
+  "checkpoint": [160, 540],
+  "grounds": [
+    [[0, 620], [3000, 150]]
+  ],
+  "platforms": [],
+  "trees": [],
+  "blocks": [],
+  "fish": [],
+  "enemies": [],
+  "required_fish": 0,
+  "story_beats": [
+    {
+      "id": "act_iv_letter_chain",
+      "x": 600,
+      "location": "Ramappantulu's house",
+      "marker": "LETTER / CLAIM",
+      "title": "A LETTER IS NOT ITS SENDER",
+      "line": "At Ramappantulu's house, he privately admits to Madhuravani that he wrote a letter in Agnihotravadhani's name to withdraw the match. Lubdhavadhani has the paper and can report only that he received it; the named sender has not confirmed it. When Lubdhavadhani arrives, Madhuravani improvises to keep the confrontation from spiraling. The chain is partial: Ramappantulu knows who wrote it, Madhuravani knows because he told her, and Lubdhavadhani knows the letter's claim but not its authorship.",
+      "choices": [
+        "Verify with Agnihotravadhani before acting on the letter",
+        "Delay the wedding decision while the claim is checked",
+        "Seek help so Madhuravani is not left to manage the risk alone"
+      ],
+      "choice_responses": [
+        "Verification would require the named sender; the paper alone cannot establish his authorship. This episode ends before that check returns.",
+        "A pause withholds a verdict until the author can be checked. It does not settle the marriage or transfer authority over either sister.",
+        "Seeking help is safer than letting Ramappantulu's pressure set the pace. Madhuravani's knowledge remains hers to share; no confession is forced here."
+      ],
+      "response": "Choose a way to handle uncertainty, not a verdict: the named sender has not confirmed the letter, and the marriage outcome stays with the source plot."
+    },
+    {
+      "id": "act_iv_wedding_bargain",
+      "x": 1600,
+      "location": "Lubdhavadhani's wedding setting",
+      "marker": "RITUAL / STATUS",
+      "title": "RESPECTABILITY HAS A PRICE TAG",
+      "line": "At Lubdhavadhani's wedding, the men bargain over one-night custom, ritual timing, ceremony costs, and whose standing deserves deference. Ramappantulu's role as mediator becomes part of the farce when the ritual proceeds without him. The satire stays on bargaining, men's status, and claims of male respectability. This wedding bargaining does not establish who wrote the letter; a woman's future is at stake, not a bargaining token.",
+      "choices": [
+        "Keep the ceremony's claims separate from the letter's authorship"
+      ],
+      "response": "Ritual and reputation may change the bargaining, but neither authenticates the letter. Madhuravani's intervention does not hand the player control of the wedding."
+    },
+    {
+      "id": "act_iv_buchchamma_pressure",
+      "x": 2550,
+      "location": "Agnihotravadhani's residence",
+      "marker": "LESSON / PRESSURE",
+      "title": "A LESSON WITH AN ULTIMATUM",
+      "line": "At Agnihotravadhani's residence, Gireesam turns teaching Venkatesam into cover for a private pitch to Buchchamma. He claims that eloping with him is the only way to stop her sister's arranged marriage and pressures her with threats of self-harm. His claim is his scheme, not a verified fact; Buchchamma's concern for her sister does not make her responsible for the crisis or oblige her to accept it.",
+      "choices": [
+        "Separate Buchchamma's concern from Gireesam's ultimatum"
+      ],
+      "response": "The pressure remains pressure, not romance or a heroic shortcut. The episode neither asks Buchchamma to solve the crisis nor rewards the proposed elopement."
+    }
+  ]
+}
