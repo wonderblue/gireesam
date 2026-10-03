@@ -265,17 +265,17 @@
   "title.story_act_vii": "PLAY ACT VII",
   "stage.act_v.route.name": "Rumor is not a verdict",
   "stage.act_vi.route.name": "A wedding already moved",
-  "stage.act_vii.route.name": "Street fraud and paper power",
+  "stage.act_vii.route.name": "案件与女人们的下一步",
   "story.act5.ending": "ACT V COMPLETE",
   "story.act5.ending_copy": "The compact Act V episode ends without turning rumor into a verdict over anyone's past.",
   "story.act6.ending": "ACT VI COMPLETE",
   "story.act6.ending_copy": "The compact Act VI episode ends without reassigning Subbi's future or Madhuravani's door.",
-  "story.act7.ending": "ACT VII COMPLETE",
-  "story.act7.ending_copy": "The compact Act VII episode ends without trophies taken from the women in the case.",
+  "story.act7.ending": "第七幕 · 女人们选择此后道路",
+  "story.act7.ending_copy": "Sowjanya 认可 Madhuravani 的保护，并拒绝 Gireesam 自诩的改革。本案在本改编中以证据不足收束，而非虚构一九〇九年法庭判决。Buchchamma 的教育与独立前程仍属她本人；终场归于 Madhuravani、Sowjanya 与 Buchchamma。",
   "story.objective.act5.find": "ACT V · Attend to: {marker}",
   "story.objective.act5.exit": "ACT V · Leave without forcing a confession from rumor",
   "story.objective.act6.find": "ACT VI · Attend to: {marker}",
   "story.objective.act6.exit": "ACT VI · Leave contested claims unresolved",
-  "story.objective.act7.find": "ACT VII · Attend to: {marker}",
-  "story.objective.act7.exit": "ACT VII · Leave without claiming ownership of anyone's future"
+  "story.objective.act7.find": "第七幕 · 核查：{marker}",
+  "story.objective.act7.exit": "第七幕 · 未证实的案卷收束；Buchchamma 选择自己的未来"
 }
