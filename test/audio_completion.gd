@@ -19,10 +19,11 @@ func _run() -> void:
 	var catalog = load("res://scripts/audio_catalog.gd")
 	var bank: Dictionary[StringName, AudioStream] = {}
 	for cue in catalog.CUE_PATHS:
-		var stream := load(catalog.CUE_PATHS[cue]) as AudioStreamOggVorbis
+		# Catalog mixes Ogg template SFX with WAV/MP3 story cues and BGM.
+		var stream := load(catalog.CUE_PATHS[cue]) as AudioStream
 		_check(stream != null and stream.get_length() > 0.1, "final cue loads: " + str(cue))
 		bank[cue] = stream
-	var bgm := load(catalog.BGM_PATH) as AudioStreamOggVorbis
+	var bgm := load(catalog.BGM_PATH) as AudioStream
 	_check(bgm != null and bgm.get_length() > 30.0, "supplied full music track loads")
 	audio.configure(bgm, bank)
 	for bus in [&"Master", &"Music", &"SFX", &"UI"]:
