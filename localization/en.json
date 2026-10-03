@@ -231,6 +231,7 @@
   "title.story_act_i": "PLAY ACT I · STORY",
   "title.story_act_ii": "PLAY ACT II",
   "title.story_act_iii": "PLAY ACT III",
+  "title.story_act_iv": "PLAY ACT IV",
   "story.button.listen": "LISTEN / ACT\nE",
   "story.button.hide": "HIDE / WAIT\nE",
   "story.button.peek": "PEEK / RE-HIDE\nE",
@@ -244,6 +245,8 @@
   "story.objective.act2.exit": "ACT II · Leave the scene with the plan unresolved",
   "story.objective.act3.find": "ACT III · Attend to: {marker}",
   "story.objective.act3.exit": "ACT III · Leave the garden after all four stops",
+  "story.objective.act4.find": "ACT IV · Attend to: {marker}",
+  "story.objective.act4.exit": "ACT IV · Leave with the named sender's confirmation still pending",
   "story.stage_clear": "SCENE CHANGE",
   "story.stage_summary": "{stage} complete.\nNext: {next}",
   "story.act1.ending": "ACT I · MADHURAVANI SETS THE TERMS",
@@ -253,5 +256,8 @@
   "story.act2.ending_copy": "The household's resistance remains, and the temple plan stays dangerous and unresolved. This is a compact Act II adaptation, not a rescue or the full play.",
   "stage.act_iii.route.name": "Madhuravani's account",
   "story.act3.ending": "ACT III · MADHURAVANI READS THE ACCOUNT",
-  "story.act3.ending_copy": "Madhuravani joins a scheme against the proposed match; Gireesam's courtship remains unearned, and Buchchamma's future is not decided here. This is a compact Act III adaptation, not the full play."
+  "story.act3.ending_copy": "Madhuravani joins a scheme against the proposed match; Gireesam's courtship remains unearned, and Buchchamma's future is not decided here. This is a compact Act III adaptation, not the full play.",
+  "stage.act_iv.route.name": "A letter awaiting confirmation",
+  "story.act4.ending": "ACT IV · THE LETTER IS NOT ITS SENDER",
+  "story.act4.ending_copy": "Madhuravani's improvisation buys time; Agnihotravadhani has not independently confirmed the letter's claim. The wedding farce exposes status bargaining, while Buchchamma is not responsible for Gireesam's pressure or the marriage crisis. This is a compact Act IV adaptation, not the full play."
 }
