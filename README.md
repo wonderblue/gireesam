@@ -73,7 +73,7 @@ python3 -m http.server 8080 --directory web-export
 
 ## 📚 Story adaptations
 
-The title screen keeps the standard escape campaign and separate **PLAY ACT I · STORY**, **PLAY ACT II**, **PLAY ACT III**, and **PLAY ACT IV** routes. Act III remains a compact route through four source locations. Act IV is a compact, English-language three-stop episode that audits a forged letter, follows the wedding bargaining, and frames Gireesam's pressured elopement pitch without rewarding it as romance. See the distinct [Act II](./docs/ACT_II_ADAPTATION.md), [Act III](./docs/ACT_III_ADAPTATION.md), and [Act IV](./docs/ACT_IV_ADAPTATION.md) source-witness and adaptation notes.
+The title screen keeps the standard escape campaign and separate **PLAY ACT I · STORY**, **PLAY ACT II**, **PLAY ACT III**, **PLAY ACT IV**, and **PLAY ACT V** routes. Act III remains a compact route through four source locations. Act IV is a compact, English-language three-stop episode that audits a forged letter, follows the wedding bargaining, and frames Gireesam's pressured elopement pitch without rewarding it as romance. Act V is a compact, English-language three-stop observer episode about Lubdhavadhani's panic, disguise-related confusion, and the police/bribery farce; it keeps the report unresolved and leaves Act VII material in its later place. See the distinct [Act II](./docs/ACT_II_ADAPTATION.md), [Act III](./docs/ACT_III_ADAPTATION.md), [Act IV](./docs/ACT_IV_ADAPTATION.md), and [Act V](./docs/ACT_V_ADAPTATION.md) source-witness and adaptation notes.
 
 ---
 

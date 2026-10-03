@@ -1,0 +1,63 @@
+{
+  "id": "act_v_disguise_search",
+  "act": "V",
+  "name_key": "stage.act_v.route.name",
+  "world_width": 3000,
+  "spawn": [160, 540],
+  "goal": [2890, 600],
+  "checkpoint": [160, 540],
+  "grounds": [
+    [[0, 620], [3000, 150]]
+  ],
+  "platforms": [],
+  "trees": [],
+  "blocks": [],
+  "fish": [],
+  "enemies": [],
+  "required_fish": 0,
+  "story_beats": [
+    {
+      "id": "act_v_lubdhavadhani_panic",
+      "x": 600,
+      "location": "Lubdhavadhani's bedroom",
+      "marker": "FEAR / RUMOR",
+      "title": "A NIGHTMARE IS NOT A WITNESS",
+      "line": "At Lubdhavadhani's lodging, he wakes in alarm and lets a dream, rumors about the new marriage, and his own guesses blur together. The scene gives us his panic, not a settled account of what happened; fear alone cannot establish any person's identity or fate.",
+      "choices": [
+        "Record the fear separately from anything directly witnessed"
+      ],
+      "response": "The alarm is real; its explanation remains unverified. This stop does not decide anyone else's identity or future."
+    },
+    {
+      "id": "act_v_madhuravani_disguise",
+      "x": 1500,
+      "location": "Madhuravani's card room",
+      "marker": "DISGUISE / DOOR",
+      "title": "A VOICE IS NOT A SIGHTING",
+      "line": "During a late-night card game, callers and a borrowed voice scramble what people believe is happening behind Madhuravani's door. She manages what the callers are told and keeps the disguised visitor from being exposed; the visitor is a person to protect, not a clue to collect or a joke about gender.",
+      "choices": [
+        "Respect Madhuravani's choice about what to reveal"
+      ],
+      "response": "Madhuravani controls her room and her disclosures. The player does not uncover, expose, or pursue the disguised visitor."
+    },
+    {
+      "id": "act_v_police_bribery",
+      "x": 2500,
+      "location": "The search from the courtyard to the temple street",
+      "marker": "SEARCH / BRIBES",
+      "title": "AN ORDER IS NOT PROOF",
+      "line": "As the report moves into a search, accusations and instructions keep shifting. Police searches, conflicting orders, bribe money, legal posturing, and rehearsed or speculative testimony turn the inquiry into farce; none of that establishes what happened to the person others say is missing.",
+      "choices": [
+        "Record each order and who issued it before acting",
+        "Refuse a paid or rehearsed account and note the offer",
+        "Separate firsthand observation from rumor, even under pressure"
+      ],
+      "choice_responses": [
+        "Conflicting instructions explain the confusion; they do not verify the accusation or decide the case.",
+        "Money can influence a witness, but it cannot turn a scripted account into proof.",
+        "A search can begin on a claim. Only direct, checked evidence can establish what happened."
+      ],
+      "response": "The order, the rumor, and the paid account remain distinct. This compact Act V episode does not settle the person's identity or the later case."
+    }
+  ]
+}

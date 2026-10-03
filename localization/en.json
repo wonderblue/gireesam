@@ -257,7 +257,13 @@
   "stage.act_iii.route.name": "Madhuravani's account",
   "story.act3.ending": "ACT III · MADHURAVANI READS THE ACCOUNT",
   "story.act3.ending_copy": "Madhuravani joins a scheme against the proposed match; Gireesam's courtship remains unearned, and Buchchamma's future is not decided here. This is a compact Act III adaptation, not the full play.",
-  "stage.act_iv.route.name": "A letter awaiting confirmation",
-  "story.act4.ending": "ACT IV · THE LETTER IS NOT ITS SENDER",
-  "story.act4.ending_copy": "Madhuravani's improvisation buys time; Agnihotravadhani has not independently confirmed the letter's claim. The wedding farce exposes status bargaining, while Buchchamma is not responsible for Gireesam's pressure or the marriage crisis. This is a compact Act IV adaptation, not the full play."
+	"stage.act_iv.route.name": "A letter awaiting confirmation",
+	"story.act4.ending": "ACT IV · THE LETTER IS NOT ITS SENDER",
+	"story.act4.ending_copy": "Madhuravani's improvisation buys time; Agnihotravadhani has not independently confirmed the letter's claim. The wedding farce exposes status bargaining, while Buchchamma is not responsible for Gireesam's pressure or the marriage crisis. This is a compact Act IV adaptation, not the full play.",
+	"title.story_act_v": "PLAY ACT V",
+	"story.objective.act5.find": "ACT V · Attend to: {marker}",
+	"story.objective.act5.exit": "ACT V · Leave the report unverified",
+	"stage.act_v.route.name": "Rumors, disguise, and a search",
+	"story.act5.ending": "ACT V · THE SEARCH IS NOT A VERDICT",
+	"story.act5.ending_copy": "Fear, disguise, shifting orders, and bribes complicate the inquiry. None is proof of what happened. This is a compact Act V adaptation, not the full play."
 }
