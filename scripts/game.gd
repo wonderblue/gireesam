@@ -564,27 +564,35 @@ func _style_round_button(button: Button, color: Color, edge: Color, ink: Color) 
 func _layout_hud() -> void:
 	if not is_instance_valid(hud_root): return
 	var size := get_viewport_rect().size
-	for label in [score_label, coin_label, time_label]:
+	for label in [score_label, coin_label, time_label, reputation_label]:
+		if label == null: continue
+		# Keep font ≥14 logical px so physical mobile targets stay ≥14 (pixel_scale≈1).
 		label.add_theme_font_size_override("font_size", 14 if size.x < 400 else 17 if size.x < 800 else 19)
 		label.add_theme_font_override("font", MENU_STYLE.trimmed(MENU_STYLE.SMALL_HEADING, label.get_theme_font_size("font_size"), 0.26, 0.3))
 	var top: PanelContainer = hud_root.get_node("TopBar")
 	top.offset_top = 4 if size.y < 240 else 10
 	var compact := size.y < 240 or size.x < 700
-	for chip_name in ["ScoreChip", "FishChip", "TimeChip"]:
+	var ultra_narrow := size.x < 360
+	for chip_name in ["ScoreChip", "FishChip", "TimeChip", "ReputationChip"]:
 		var chip: PanelContainer = top.get_node("HudContent/Stats/" + chip_name)
 		var chip_style := chip.get_theme_stylebox("panel") as StyleBoxFlat
-		chip_style.content_margin_left = 8 if compact else 14
-		chip_style.content_margin_right = 10 if compact else 16
+		chip_style.content_margin_left = 6 if ultra_narrow else (8 if compact else 14)
+		chip_style.content_margin_right = 8 if ultra_narrow else (10 if compact else 16)
 		chip_style.content_margin_top = 2 if compact else 5
 		chip_style.content_margin_bottom = 3 if compact else 6
+	# Long "REPUTATION n/100" chip overflows 320-wide logical surfaces; drop it
+	# before icons so score/fish/time/pause still fit inside the letterbox.
+	top.get_node("HudContent/Stats/ReputationChip").visible = size.x >= 480
+	top.get_node("HudContent/Stats/FishChip").visible = size.x >= 280
 	top.get_node("HudContent/Stats/FishChip").get_child(0).get_node("FundIcon").visible = size.x >= 520
 	top.get_node("HudContent/Stats/ScoreChip").get_child(0).get_node("StarIcon").visible = size.x >= 520
 	_time_icon.visible = size.x >= 520
 	score_caption.visible = size.y >= 240 and size.x >= 400
-	top.get_node("HudContent/Stats").add_theme_constant_override("separation", 6 if compact else 10)
+	top.get_node("HudContent/Stats").add_theme_constant_override("separation", 4 if ultra_narrow else (6 if compact else 10))
 	top.get_node("HudContent/Stats/Route").visible = size.y >= 340 and size.x >= 700
-	top.offset_left = 12
-	top.offset_right = -12
+	pause_button.custom_minimum_size = Vector2(40, 40) if ultra_narrow else Vector2(48, 48)
+	top.offset_left = 8 if ultra_narrow else 12
+	top.offset_right = -8 if ultra_narrow else -12
 	_fit_hud_height()
 
 func _fit_hud_height() -> void:
