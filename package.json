@@ -11,6 +11,7 @@
     "export": "mkdir -p dist && godot --headless --path . --export-release Web dist/index.html",
     "verify-export": "node scripts/check-exported-pack.mjs",
     "test": "godot --headless --path . -s test/smoke.gd",
+    "test:act-i": "godot --headless --audio-driver Dummy --path . --script test/act_i_story_contract.gd",
     "test:checks": "node --test test/exported-pack-profile.test.mjs test/loader-language.test.mjs",
     "test:responsive": "godot --headless --path . --script test/responsive_layout.gd",
     "test:audio": "node scripts/check-audio.mjs",

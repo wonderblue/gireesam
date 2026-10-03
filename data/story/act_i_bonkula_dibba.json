@@ -1,0 +1,62 @@
+{
+  "id": "act_i_bonkula_dibba",
+  "name_key": "stage.act_i.bonkula_dibba.name",
+  "world_width": 3200,
+  "spawn": [160, 540],
+  "goal": [3020, 600],
+  "checkpoint": [160, 540],
+  "grounds": [
+    [[0, 620], [920, 150]],
+    [[1000, 620], [900, 150]],
+    [[1980, 620], [1150, 150]]
+  ],
+  "platforms": [
+    [[560, 490], [220, 30]],
+    [[1220, 500], [250, 30]],
+    [[1570, 430], [190, 30]],
+    [[2200, 490], [260, 30]]
+  ],
+  "trees": [],
+  "blocks": [],
+  "fish": [],
+  "enemies": [],
+  "required_fish": 0,
+  "story_beats": [
+    {
+      "id": "dibba_debt",
+      "x": 430,
+      "marker": "ACCOUNT BOOK",
+      "title": "BONKULA DIBBA · THE ACCOUNT BOOK",
+      "line": "At Bonkula Dibba, Gireesam admits that the twenty rupees he took from Pootakullamma for provisions went on dancing girls. Their argument has made staying unsafe; he plans to leave by way of his pupil, Venkatesam.",
+      "choices": ["Read the debt as a plain entry", "Recast the account as a grand theory"],
+      "response": "The ledger stays stubbornly ordinary. Gireesam's explanation does not repay it."
+    },
+    {
+      "id": "dibba_student",
+      "x": 1080,
+      "marker": "VENKATESAM",
+      "title": "THE TUTOR'S AUDIENCE",
+      "line": "Gireesam puts on mock scholarship, switching into grand English-backed claims to keep Venkatesam listening. The boy answers with the practical truth: his tutor has scarcely taught him a lesson.",
+      "choices": ["Perform the elaborate scholarship routine", "Let Venkatesam describe the lessons"],
+      "response": "The speech grows; the syllabus does not. The joke is Gireesam's pretension, not the boy's poor result."
+    },
+    {
+      "id": "dibba_supplies",
+      "x": 1740,
+      "marker": "THE TUTOR'S LIST",
+      "title": "EVERYTHING IS A TEACHING AID",
+      "line": "Under the tutor story, Gireesam solicits books, cash, sweets, cigars, and transport. He dresses each want as educational necessity while preparing to leave town with Venkatesam.",
+      "choices": ["Arrange the requests as a lesson plan", "Count each request without the lecture"],
+      "response": "The list is clear; the scholarship remains a performance. Nothing here earns a reward for the deception."
+    },
+    {
+      "id": "dibba_departure",
+      "x": 2550,
+      "marker": "ROAD OUT",
+      "title": "A ROUTE, NOT A VICTORY",
+      "line": "The route turns from Bonkula Dibba toward Madhuravani's room. Gireesam has an exit plan, not a moral triumph; the next scene changes focus to Madhuravani.",
+      "choices": ["Follow the practical road", "Give the road one last grand title"],
+      "response": "The departure leads into another person's story."
+    }
+  ]
+}

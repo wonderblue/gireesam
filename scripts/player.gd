@@ -20,6 +20,7 @@ var idle_texture: Texture2D = HERO_TEXTURE
 var run_frames: Array[Texture2D] = RUN_FRAMES.duplicate()
 var sprite_grounding := SPRITE_GROUNDING.new()
 var alive := true
+var story_hidden := false
 var facing := 1.0
 var spawn_position := Vector2.ZERO
 var coyote_time := 0.0
@@ -49,6 +50,9 @@ func _ready() -> void:
 	queue_redraw()
 
 func _physics_process(delta: float) -> void:
+	if story_hidden:
+		velocity = Vector2.ZERO
+		return
 	stomp_grace = maxf(0.0, stomp_grace - delta)
 	attack_cooldown_left = maxf(0.0, attack_cooldown_left - delta)
 	shot_flash = maxf(0.0, shot_flash - delta)
@@ -183,6 +187,8 @@ func sprite_draw_rect() -> Rect2:
 
 
 func _draw() -> void:
+	if story_hidden:
+		return
 	var texture := current_sprite_texture()
 	var canvas: Rect2 = sprite_grounding.canvas_rect(texture, sprite_pixel_scale(), FOOT_Y)
 	if canvas.has_area():
@@ -206,3 +212,9 @@ func clear_input() -> void:
 	jump_buffer = 0.0
 	touch_jump_was_pressed = false
 	suppress_actions_until_release = true
+
+func set_story_hidden(value: bool) -> void:
+	story_hidden = value
+	visible = not value
+	if value:
+		velocity = Vector2.ZERO
