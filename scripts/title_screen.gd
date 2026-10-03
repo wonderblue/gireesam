@@ -470,14 +470,23 @@ func _layout() -> void:
 	center.offset_top = (_lockup.offset_bottom + (4.0 if short else 12.0)) if _lockup.visible else 0.0
 	center.offset_bottom = -reserved
 	var available := Vector2(size.x - 24.0, size.y - center.offset_top - reserved - 8.0)
+	# Seven Act routes made the old 3-up grid wider than phone letterboxes; stack
+	# until the card can hold two/three columns without escaping the viewport.
+	var columns := 1 if available.x < 560.0 else (2 if available.x < 900.0 else 3)
+	_actions.columns = columns
+	var column_gap := float(_actions.get_theme_constant("h_separation"))
 	var card_w := minf(460.0 if wide else 560.0, available.x)
-	_title_panel.custom_minimum_size = Vector2(card_w, 0)
 	var margin := 12 if short else (16 if compact else 20)
+	var button_w := maxf(120.0, floorf((card_w - float(margin) * 2.0 - column_gap * float(columns - 1)) / float(columns)))
+	for child in _actions.get_children():
+		if child is Button:
+			(child as Button).custom_minimum_size.x = button_w
+			(child as Button).size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	_title_panel.custom_minimum_size = Vector2(card_w, 0)
 	_title_panel.add_theme_stylebox_override("panel", STYLE.card(Color(1, 0.955, 0.86, 0.97), margin))
 	_title_panel.queue_redraw()
 	var natural := _body.get_combined_minimum_size().y
 	_title_scroll.custom_minimum_size = Vector2(0, clampf(natural, 12.0, maxf(12.0, available.y - margin * 2.0)))
-	_actions.columns = 1 if available.x < 440.0 else 3
 	if _language_caption != null: _language_caption.visible = available.x >= 520.0
 	# The field placeholder names the field; compact folds spend the height on Start.
 	_profile_caption.visible = size.y >= 480.0

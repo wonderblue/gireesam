@@ -571,8 +571,8 @@ func _layout_hud() -> void:
 		label.add_theme_font_override("font", MENU_STYLE.trimmed(MENU_STYLE.SMALL_HEADING, label.get_theme_font_size("font_size"), 0.26, 0.3))
 	var top: PanelContainer = hud_root.get_node("TopBar")
 	top.offset_top = 4 if size.y < 240 else 10
-	var compact := size.y < 240 or size.x < 700
-	var ultra_narrow := size.x < 360
+	var compact := size.y < 240 or size.x < 900
+	var ultra_narrow := size.x < 400
 	for chip_name in ["ScoreChip", "FishChip", "TimeChip", "ReputationChip"]:
 		var chip: PanelContainer = top.get_node("HudContent/Stats/" + chip_name)
 		var chip_style := chip.get_theme_stylebox("panel") as StyleBoxFlat
@@ -580,19 +580,33 @@ func _layout_hud() -> void:
 		chip_style.content_margin_right = 8 if ultra_narrow else (10 if compact else 16)
 		chip_style.content_margin_top = 2 if compact else 5
 		chip_style.content_margin_bottom = 3 if compact else 6
-	# Long "REPUTATION n/100" chip overflows 320-wide logical surfaces; drop it
-	# before icons so score/fish/time/pause still fit inside the letterbox.
-	top.get_node("HudContent/Stats/ReputationChip").visible = size.x >= 480
-	top.get_node("HudContent/Stats/FishChip").visible = size.x >= 280
-	top.get_node("HudContent/Stats/FishChip").get_child(0).get_node("FundIcon").visible = size.x >= 520
-	top.get_node("HudContent/Stats/ScoreChip").get_child(0).get_node("StarIcon").visible = size.x >= 520
-	_time_icon.visible = size.x >= 520
-	score_caption.visible = size.y >= 240 and size.x >= 400
-	top.get_node("HudContent/Stats").add_theme_constant_override("separation", 4 if ultra_narrow else (6 if compact else 10))
-	top.get_node("HudContent/Stats/Route").visible = size.y >= 340 and size.x >= 700
+	# English HUD copy ("REFORM FUNDS", "REPUTATION n/100") is wide; reveal chips
+	# only when the letterboxed logical width can hold them beside Pause.
+	var stats: HBoxContainer = top.get_node("HudContent/Stats")
+	var fish: PanelContainer = stats.get_node("FishChip")
+	var time_chip: PanelContainer = stats.get_node("TimeChip")
+	var rep: PanelContainer = stats.get_node("ReputationChip")
+	var route: Control = stats.get_node("Route")
+	fish.visible = size.x >= 820
+	time_chip.visible = size.x >= 360
+	rep.visible = size.x >= 1100
+	route.visible = size.y >= 340 and size.x >= 1100
+	fish.get_child(0).get_node("FundIcon").visible = size.x >= 1100
+	stats.get_node("ScoreChip").get_child(0).get_node("StarIcon").visible = size.x >= 900
+	_time_icon.visible = size.x >= 900
+	score_caption.visible = size.y >= 240 and size.x >= 900
+	stats.add_theme_constant_override("separation", 4 if ultra_narrow else (6 if compact else 10))
 	pause_button.custom_minimum_size = Vector2(40, 40) if ultra_narrow else Vector2(48, 48)
 	top.offset_left = 8 if ultra_narrow else 12
 	top.offset_right = -8 if ultra_narrow else -12
+	# Drop optional chips until the row's minimum width fits the bar.
+	var margin := 16.0 if ultra_narrow else 24.0
+	for optional: Control in [route, rep, fish, time_chip]:
+		if not optional.visible:
+			continue
+		if top.get_combined_minimum_size().x <= size.x - margin:
+			break
+		optional.visible = false
 	_fit_hud_height()
 
 func _fit_hud_height() -> void:
