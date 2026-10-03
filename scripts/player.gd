@@ -21,6 +21,7 @@ var run_frames: Array[Texture2D] = RUN_FRAMES.duplicate()
 var sprite_grounding := SPRITE_GROUNDING.new()
 var alive := true
 var story_hidden := false
+var story_observer_mode := false
 var facing := 1.0
 var spawn_position := Vector2.ZERO
 var coyote_time := 0.0
@@ -188,6 +189,11 @@ func sprite_draw_rect() -> Rect2:
 
 func _draw() -> void:
 	if story_hidden:
+		return
+	if story_observer_mode:
+		draw_circle(Vector2.ZERO, 18.0, Color("#674638"))
+		draw_circle(Vector2.ZERO, 13.0, Color("#f3dfae"))
+		draw_circle(Vector2.ZERO, 5.0, Color("#6b7660"))
 		return
 	var texture := current_sprite_texture()
 	var canvas: Rect2 = sprite_grounding.canvas_rect(texture, sprite_pixel_scale(), FOOT_Y)

@@ -1,0 +1,51 @@
+{
+  "id": "act_ii_household",
+  "act": "II",
+  "name_key": "stage.act_ii.household.name",
+  "world_width": 2560,
+  "spawn": [160, 540],
+  "goal": [2460, 600],
+  "checkpoint": [160, 540],
+  "grounds": [
+    [[0, 620], [2560, 150]]
+  ],
+  "platforms": [],
+  "trees": [],
+  "blocks": [],
+  "fish": [],
+  "enemies": [],
+  "required_fish": 0,
+  "story_beats": [
+    {
+      "id": "act_ii_education_cost",
+      "x": 470,
+      "marker": "SCHOOL FEES",
+      "title": "A HOUSEHOLD COUNTS THE FEES",
+      "line": "Venkamma defends Venkatesam's English education while Agnihotravadhani counts the costs of books and schooling. Gireesam demonstrates an English lesson to present himself as useful; Venkatesam's recent exam failure sharpens the debate. Venkamma even offers to sell land her parents gave her. This adaptation lets her case lead the household scene.",
+      "choices": ["Keep the education debate in view"],
+      "response": "The expenses are real in the scene, but they do not settle the value of education or Venkatesam's future."
+    },
+    {
+      "id": "act_ii_subbi_offer",
+      "x": 1050,
+      "marker": "SUBBI'S FUTURE",
+      "title": "A BARGAIN MADE OVER HER HEAD",
+      "line": "Agnihotravadhani offers his daughter Subbi to the wealthy older Lubdhavadhani for 1,800 rupees. Venkamma and Buchchamma resist the proposed match. This adaptation does not give the player authority over Subbi or turn her into a route objective.",
+      "choices": ["Repeat the bargain's security claim", "Name the consequence it assigns to Subbi"],
+      "choice_responses": [
+        "Calling the bargain security repeats the men's claim: the sum is explicit, but Subbi is still the one expected to live with the proposed match. An offer is not consent.",
+        "Naming the cost makes visible what the bargain leaves out. Venkamma and Buchchamma's resistance remains, but the adaptation does not claim that a choice here cancels the offer."
+      ],
+      "response": "The money claim and the consequence for Subbi are not interchangeable. Neither choice rewards coercion or decides her future."
+    },
+    {
+      "id": "act_ii_temple_plan",
+      "x": 1830,
+      "marker": "TEMPLE PLAN",
+      "title": "AN EXIT PLAN WITH A DEADLY RISK",
+      "line": "At the temple, Karataka Śāstri proposes that his male disciple pose as a girl and take Subbi's place long enough to escape. He warns that discovery could cost the disciple his life. The plan is dangerous, not a completed rescue; this compact adaptation stops before it is carried out.",
+      "choices": ["Leave the plan unresolved"],
+      "response": "A risky proposal is not protection. Subbi is not a prize, the disciple is not a disposable tool, and the episode does not claim a happy escape."
+    }
+  ]
+}
