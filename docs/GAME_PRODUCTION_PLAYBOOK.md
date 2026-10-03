@@ -108,6 +108,11 @@ Names are limited to 24 characters and 96 UTF-8 bytes, with unsupported glyphs a
 
 Normal Settings use `set_player_setting()` / `get_player_setting()` for the cosmetic whitelist, stored in `user://platformer_player_settings.json`. Audio preferences have their own store; debug audio values multiply them. The owner-preview tuning panel and shortcuts are gated by `owner_preview_enabled()` and do not appear in release/checkpoint builds.
 
+## Checkpoint dialogue and choice balance
+`Game._dialogue_data(1)` in `scripts/game.gd` defines Lofty Lounge's once-per-stage checkpoint dialogue. Keep Gireesam's flourish aimed at his own empty purse, not his creditor: “Your patience is a public treasure, sir. Could it cover my private debt?” is the flattering dodge and costs 2 reputation with no time reward; “No coin today; my purse is an echo. Let me write a repayment plan.” is the candid choice and grants 9 reputation plus up to 5 seconds. The shortcut bonus is capped at `min(configured_level_time, STAGE_TIME_LIMITS[1])` (95 seconds at the default Stage 2 setting), so praise cannot be the better gameplay reward.
+
+`_choose_dialogue()` applies these effects and shows each choice's `after` response. Extend the checkpoint assertions in `test/gameplay_contract.gd` when changing the copy or balance; run `godot --headless --audio-driver Dummy --path . --script test/gameplay_contract.gd` from the repository root. The test covers the exact reputation/time effects and the timer cap; it is a contract check, not interactive game acceptance.
+
 ## Focused regression map
 
 Use the [README verification commands](../README.md#verification-commands-and-limits) for isolated storage, engine/export setup and handoff. Choose tests that exercise the behavior changed:

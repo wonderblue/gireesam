@@ -650,15 +650,15 @@ func _dialogue_data(stage_id: int) -> Dictionary:
 				{"text": "National progress first; but I do require a snack.", "delta": -7, "after": "Reputation slipped. The snack did not."},
 				{"text": "Write it down, my boy—half goes toward your education.", "delta": 8, "after": "Sweet words. Peppery intentions."}
 			]
-		},
-		{
-			"title": "LECTURE 2 · PRAISE THE CREDITOR",
-			"line": "Dammit, my dear creditor, I salute your patience. Asking for repayment is small-minded; postponing it is grand intelligence. That is my recommendation.",
-			"choices": [
-				{"text": "I shall proclaim you the town’s greatest patient man.", "delta": 9, "after": "The flattery worked. The creditor paused to think."},
-				{"text": "I will tell the truth—no money, only a route forward.", "delta": -4, "after": "He told the truth. Nobody smiled; Gireesam felt lighter."}
-			]
-		},
+			},
+			{
+				"title": "LECTURE 2 · THE ECHO IN THE PURSE",
+				"line": "Dammit, creditor, my purse is so empty its echo has started asking me for rent. I owe you a plan, not another grand excuse.",
+				"choices": [
+					{"text": "Your patience is a public treasure, sir. Could it cover my private debt?", "delta": -2, "after": "He enjoys the praise, then taps the unpaid ledger. No delay; no shortcut."},
+					{"text": "No coin today; my purse is an echo. Let me write a repayment plan.", "delta": 9, "time_bonus": 5.0, "after": "He accepts the plan and points out a safe shortcut (+5 seconds). Even Gireesam hears the echo."}
+				]
+			},
 		{
 			"title": "FINAL LECTURE · A PRUDENT ESCAPE",
 			"line": "Dammit! Escape is not cowardice—it is prudence. If caught, my philosophy collapses; if free, the same philosophy becomes a triumph. Dammit, where is the door?",
@@ -738,6 +738,11 @@ func _choose_dialogue(stage_id: int, choice_index: int) -> void:
 	var data := _dialogue_data(stage_id)
 	var selected: Dictionary = data.choices[clampi(choice_index, 0, data.choices.size() - 1)]
 	reputation = clampi(reputation + int(selected.delta), 0, 100)
+	var time_bonus := float(selected.get("time_bonus", 0.0))
+	if time_bonus > 0.0:
+		var bonus_stage := clampi(stage_id, 0, STAGE_TIME_LIMITS.size() - 1)
+		var stage_time_cap := minf(configured_level_time, float(STAGE_TIME_LIMITS[bonus_stage]))
+		time_left = minf(time_left + time_bonus, stage_time_cap)
 	var response := str(selected.after)
 	var layer := dialogue_layer
 	dialogue_layer = null
