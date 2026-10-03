@@ -1,6 +1,7 @@
 {
-  "pck_sha256": "b5922475a33abbf6725fade5170447c2bba9a020bb72cafc9c121043c2cbb7a3",
-  "pck_bytes": 17251016,
-  "includes_act_iv": true,
-  "includes_act_iii": true
+  "pck_sha256": "3e088cd25924a4adb3fb62980764f45f947b5f508906da76992c093a3ee0a67b",
+  "pck_bytes": 17288384,
+  "includes_act_v": true,
+  "includes_act_vi": true,
+  "includes_act_vii": true
 }
