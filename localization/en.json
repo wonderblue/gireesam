@@ -229,6 +229,7 @@
   "account.sync": "SYNC NOW",
   "account.logout": "SIGN OUT",
   "title.story_act_i": "PLAY ACT I · STORY",
+  "title.story_act_ii": "PLAY ACT II",
   "story.button.listen": "LISTEN / ACT\nE",
   "story.button.hide": "HIDE / WAIT\nE",
   "story.button.peek": "PEEK / RE-HIDE\nE",
@@ -238,8 +239,13 @@
   "story.objective.find": "ACT I · Find: {marker}",
   "story.objective.hide": "ACT I · Stay under the bed until the search passes",
   "story.objective.exit": "ACT I · Reach the scene's exit",
+  "story.objective.act2.find": "ACT II · Attend to: {marker}",
+  "story.objective.act2.exit": "ACT II · Leave the scene with the plan unresolved",
   "story.stage_clear": "SCENE CHANGE",
   "story.stage_summary": "{stage} complete.\nNext: {next}",
   "story.act1.ending": "ACT I · MADHURAVANI SETS THE TERMS",
-  "story.act1.ending_copy": "The scene closes on Madhuravani's decision. This is a focused Act I adaptation, not the full play."
+  "story.act1.ending_copy": "The scene closes on Madhuravani's decision. This is a focused Act I adaptation, not the full play.",
+  "stage.act_ii.household.name": "Agnihotravadhani's household",
+  "story.act2.ending": "ACT II · A CLAIM HAS A COST",
+  "story.act2.ending_copy": "The household's resistance remains, and the temple plan stays dangerous and unresolved. This is a compact Act II adaptation, not a rescue or the full play."
 }

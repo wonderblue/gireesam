@@ -71,6 +71,10 @@ python3 -m http.server 8080 --directory web-export
 - **Special Reward Blocks:** +50 points (releases extra coins/items)
 - **Time Bonus:** +10 points per whole second remaining upon stage clear
 
+## 📚 Story adaptations
+
+The title screen keeps the standard campaign and **PLAY ACT I · STORY** route, and adds a separate **PLAY ACT II** household episode. This compact, English-language adaptation centers Venkamma and Buchchamma during the schooling-cost debate and Subbi's proposed match, then presents the temple disguise plan as dangerous and unresolved. Its one multi-option choice tests a claim against its cost; it does not reward coercion, decide Subbi's future, or claim a rescue. See [`docs/ACT_II_ADAPTATION.md`](./docs/ACT_II_ADAPTATION.md) for source-witness distinctions and adaptation notes.
+
 ---
 
 ## 🛠️ Project Structure

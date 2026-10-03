@@ -229,6 +229,7 @@
   "result.new_best": "新纪录！",
   "result.fish": "× {count}",
   "title.story_act_i": "第一幕 · 故事",
+  "title.story_act_ii": "第二幕 · 家庭篇",
   "story.button.listen": "聆听 / 行动\nE",
   "story.button.hide": "躲藏 / 等待\nE",
   "story.button.peek": "查看 / 再躲藏\nE",
@@ -238,8 +239,13 @@
   "story.objective.find": "第一幕 · 找到：{marker}",
   "story.objective.hide": "第一幕 · 躲在床下，等搜索结束",
   "story.objective.exit": "第一幕 · 前往场景出口",
+  "story.objective.act2.find": "第二幕 · 关注：{marker}",
+  "story.objective.act2.exit": "第二幕 · 带着未解的计划离开场景",
   "story.stage_clear": "场景转换",
   "story.stage_summary": "{stage} 完成。\n接下来：{next}",
   "story.act1.ending": "第一幕 · 玛杜拉瓦妮设定条件",
-  "story.act1.ending_copy": "场景以玛杜拉瓦妮的决定结束。这是第一幕的独立改编，并非整部戏剧。"
+  "story.act1.ending_copy": "场景以玛杜拉瓦妮的决定结束。这是第一幕的独立改编，并非整部戏剧。",
+  "stage.act_ii.household.name": "阿格尼霍特拉瓦达尼的家",
+  "story.act2.ending": "第二幕 · 主张自有代价",
+  "story.act2.ending_copy": "家中女性的反对仍在，寺庙计划依旧危险且未解决。这是第二幕的精简改编，不是救援结局，也不是完整剧作。"
 }
