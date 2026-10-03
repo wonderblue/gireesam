@@ -73,7 +73,7 @@ python3 -m http.server 8080 --directory web-export
 
 ## 📚 Story adaptations
 
-The title screen keeps the standard campaign and **PLAY ACT I · STORY** route, and adds a separate **PLAY ACT II** household episode. This compact, English-language adaptation centers Venkamma and Buchchamma during the schooling-cost debate and Subbi's proposed match, then presents the temple disguise plan as dangerous and unresolved. Its one multi-option choice tests a claim against its cost; it does not reward coercion, decide Subbi's future, or claim a rescue. See [`docs/ACT_II_ADAPTATION.md`](./docs/ACT_II_ADAPTATION.md) for source-witness distinctions and adaptation notes.
+The title screen keeps the standard escape campaign and separate **PLAY ACT I · STORY**, **PLAY ACT II**, and **PLAY ACT III** routes. Act III is one compact, English-language route through four source locations, centered on Madhuravani's reading of claims against conduct; Gireesam's courtship of Buchchamma remains self-serving and unrewarded. See [`docs/ACT_II_ADAPTATION.md`](./docs/ACT_II_ADAPTATION.md) and [`docs/ACT_III_ADAPTATION.md`](./docs/ACT_III_ADAPTATION.md) for their distinct source-witness and adaptation notes.
 
 ---
 

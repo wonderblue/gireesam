@@ -1,0 +1,73 @@
+{
+  "id": "act_iii_route",
+  "act": "III",
+  "name_key": "stage.act_iii.route.name",
+  "world_width": 4000,
+  "spawn": [160, 540],
+  "goal": [3890, 600],
+  "checkpoint": [160, 540],
+  "grounds": [
+    [[0, 620], [4000, 150]]
+  ],
+  "platforms": [],
+  "trees": [],
+  "blocks": [],
+  "fish": [],
+  "enemies": [],
+  "required_fish": 0,
+  "story_beats": [
+    {
+      "id": "act_iii_front_room_claims",
+      "x": 500,
+      "location": "Ramappantulu's front room",
+      "marker": "CLAIMS / BOUNDARIES",
+      "title": "A RESPECTABLE STORY, A DIFFERENT ACCOUNT",
+      "line": "From the front room, Madhuravani sets Ramappantulu's polished account beside his conduct: his land is mortgaged, he evades debts and the obligations of their relationship, and he has pushed an older man's marriage arrangement forward. She refuses the money he offers and unwanted intimacy; when he forces a kiss after her refusal, that is his violation, not her consent.",
+      "choices": [
+        "Hear his respectable account without its consequences",
+        "Compare his account with what he does"
+      ],
+      "choice_responses": [
+        "This reading leaves the contradiction unresolved: Ramappantulu's debts and arrangements do not disappear because he sounds respectable. His offer buys neither silence nor consent; the costs are still carried by Madhuravani and the women affected.",
+        "The conduct contradicts the claim: concealed debt, a marriage arranged for gain, money offered to smooth the dispute, and unwanted touch after refusal. Madhuravani's boundary holds; responsibility stays with Ramappantulu."
+      ],
+      "response": "The selected reading changes what you notice, not Madhuravani's refusal, her choices, or the events that follow."
+    },
+    {
+      "id": "act_iii_bedroom_disguise",
+      "x": 1500,
+      "location": "Ramappantulu's bedroom",
+      "marker": "THE DISGUISE",
+      "title": "A VISITOR IN DISGUISE",
+      "line": "In the bedroom, Karataka Śāstri arrives with his male disciple in a girl's disguise and asks for help preventing Lubdhavadhani's offered marriage to Subbi. Madhuravani joins his scheme and directs the next move through Ramappantulu's self-serving legal tactics and the astrologer. Discovery could put the disguised disciple in danger.",
+      "choices": [
+        "Attend to the risk carried by the disguised disciple"
+      ],
+      "response": "Madhuravani chooses to help. The player does not expose the disguise, dispatch the disciple, or decide Subbi's future."
+    },
+    {
+      "id": "act_iii_outside_house",
+      "x": 2500,
+      "location": "Outside Agnihotravadhani's house",
+      "marker": "COURTSHIP / MOTIVE",
+      "title": "A REFORMER'S PRIVATE ARITHMETIC",
+      "line": "Outside Agnihotravadhani's house, Gireesam privately weighs widow-reform against his own benefit, then courts Buchchamma under cover of a lesson. His asides reveal him editing his principles to fit what he hopes to gain. That improvisation is about Gireesam; it is not evidence that Buchchamma trusts him.",
+      "choices": [
+        "Notice the gap between pitch and motive"
+      ],
+      "response": "Gireesam's private arithmetic gives the audience context; it does not make Buchchamma a reward for his performance."
+    },
+    {
+      "id": "act_iii_garden_lesson",
+      "x": 3500,
+      "location": "The garden",
+      "marker": "LESSON / CONSEQUENCE",
+      "title": "A LESSON THAT KEEPS CHANGING",
+      "line": "In the garden, Gireesam turns a basic English exercise into a rolling lecture on widow marriage and social reform, filling gaps with improvised claims. He keeps steering the lesson toward courting Buchchamma and the household gains he hopes to secure. Her questions matter; the episode does not count persuasion as consent or award him a relationship.",
+      "choices": [
+        "Keep Buchchamma's response hers"
+      ],
+      "response": "Buchchamma is a participant, not a prize. This compact route ends without inventing her answer or changing the Act III plot spine."
+    }
+  ]
+}

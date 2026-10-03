@@ -230,6 +230,7 @@
   "account.logout": "SIGN OUT",
   "title.story_act_i": "PLAY ACT I · STORY",
   "title.story_act_ii": "PLAY ACT II",
+  "title.story_act_iii": "PLAY ACT III",
   "story.button.listen": "LISTEN / ACT\nE",
   "story.button.hide": "HIDE / WAIT\nE",
   "story.button.peek": "PEEK / RE-HIDE\nE",
@@ -241,11 +242,16 @@
   "story.objective.exit": "ACT I · Reach the scene's exit",
   "story.objective.act2.find": "ACT II · Attend to: {marker}",
   "story.objective.act2.exit": "ACT II · Leave the scene with the plan unresolved",
+  "story.objective.act3.find": "ACT III · Attend to: {marker}",
+  "story.objective.act3.exit": "ACT III · Leave the garden after all four stops",
   "story.stage_clear": "SCENE CHANGE",
   "story.stage_summary": "{stage} complete.\nNext: {next}",
   "story.act1.ending": "ACT I · MADHURAVANI SETS THE TERMS",
   "story.act1.ending_copy": "The scene closes on Madhuravani's decision. This is a focused Act I adaptation, not the full play.",
   "stage.act_ii.household.name": "Agnihotravadhani's household",
   "story.act2.ending": "ACT II · A CLAIM HAS A COST",
-  "story.act2.ending_copy": "The household's resistance remains, and the temple plan stays dangerous and unresolved. This is a compact Act II adaptation, not a rescue or the full play."
+  "story.act2.ending_copy": "The household's resistance remains, and the temple plan stays dangerous and unresolved. This is a compact Act II adaptation, not a rescue or the full play.",
+  "stage.act_iii.route.name": "Madhuravani's account",
+  "story.act3.ending": "ACT III · MADHURAVANI READS THE ACCOUNT",
+  "story.act3.ending_copy": "Madhuravani joins a scheme against the proposed match; Gireesam's courtship remains unearned, and Buchchamma's future is not decided here. This is a compact Act III adaptation, not the full play."
 }
