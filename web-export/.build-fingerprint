@@ -1,5 +1,7 @@
 {
-  "pck_sha256": "c408477f42a8834949e6416c9c8dfee6260e89e9b484139f390ecef4ec92ef01",
-  "pck_bytes": 17286276,
-  "zh_cn": true
+  "pck_sha256": "f9ab606c0541a55df7c2b8d31b341051d86fd70bc16fc825812e97abd5a0fd85",
+  "pck_bytes": 17292676,
+  "zh_cn": true,
+  "act_vii": "case_resolution",
+  "main": "8da9ec9"
 }
