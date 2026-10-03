@@ -78,7 +78,12 @@ func _run() -> void:
 		if not font.has_char(character.unicode_at(0)):
 			_fail("exported font is missing required glyph U+%04X" % character.unicode_at(0))
 			return
-	if font.fallbacks[0].data.size() > 1000000:
+	var chinese_face: Font = font.fallbacks[0]
+	var chinese_file: Font = chinese_face.base_font if chinese_face is FontVariation else chinese_face
+	if chinese_file == null or not (chinese_file is FontFile):
+		_fail("exported Chinese fallback is not a FontFile with measurable data")
+		return
+	if (chinese_file as FontFile).data.size() > 1000000:
 		_fail("exported Chinese font exceeds the 1 MB limit")
 		return
 	var i18n := root.get_node_or_null("I18n")
@@ -87,16 +92,20 @@ func _run() -> void:
 		return
 	var english: Dictionary = i18n.catalog("en")
 	var chinese: Dictionary = i18n.catalog("zh-CN")
-	if english.is_empty() or english.keys() != chinese.keys():
+	var english_keys := english.keys()
+	var chinese_keys := chinese.keys()
+	english_keys.sort()
+	chinese_keys.sort()
+	if english.is_empty() or english_keys != chinese_keys:
 		_fail("exported localization catalogs are missing or have different keys")
 		return
 	var previous_locale: String = i18n.get_locale()
 	i18n.set_locale("zh-CN")
-	if i18n.t("title.play") != "开始游戏" or i18n.t("hud.score", {"score": "123"}) != "分数\n123":
+	if i18n.t("title.play") != "开始游戏" or i18n.t("hud.score.caption") != "分数" or i18n.t("hud.score", {"score": "123"}) != "123":
 		_fail("exported Chinese title/HUD localization is unavailable")
 		return
 	i18n.set_locale("en")
-	if i18n.t("title.play") != "LET'S PLAY":
+	if i18n.t("title.play") != "START ESCAPE" or i18n.t("hud.score", {"score": "123"}) != "SCORE 123":
 		_fail("exported English title localization is unavailable")
 		return
 	i18n.set_locale(previous_locale)
