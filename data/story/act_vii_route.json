@@ -1,0 +1,81 @@
+{
+  "id": "act_vii_reckoning",
+  "act": "VII",
+  "name_key": "stage.act_vii.route.name",
+  "world_width": 3000,
+  "spawn": [
+    160,
+    540
+  ],
+  "goal": [
+    2890,
+    600
+  ],
+  "checkpoint": [
+    160,
+    540
+  ],
+  "grounds": [
+    [
+      [
+        0,
+        620
+      ],
+      [
+        3000,
+        150
+      ]
+    ]
+  ],
+  "platforms": [],
+  "trees": [],
+  "blocks": [],
+  "fish": [],
+  "enemies": [],
+  "required_fish": 0,
+  "story_beats": [
+    {
+      "id": "act_vii_street_fraud",
+      "x": 600,
+      "location": "Street in Visakhapatnam",
+      "marker": "STREET / FRAUD",
+      "title": "HOLY MEN AND UNPAID BILLS",
+      "line": "On a Visakhapatnam street, a bairagi troupe performs holiness while a shopkeeper chases unpaid toddy debts, and gossip names a village case about a girl and false witnesses. The satire sits on fraud, rumor, and men's panic about careers. The missing girl is not a collectible the player can recover for points.",
+      "choices": [
+        "Keep the joke on fraud and career panic, not on the missing girl",
+        "Treat street gossip as gossip",
+        "Refuse to turn a legal scare into a rescue fantasy"
+      ],
+      "choice_responses": [
+        "Comedy belongs to unpaid bills and borrowed holiness. The girl's safety is not a punchline.",
+        "Gossip may point at a case without proving it. This stop does not invent a verdict.",
+        "A compact episode can show pressure without letting the player stage a heroic recovery the source does not grant here."
+      ],
+      "response": "Choose how to read street noise; the case remains larger than this route."
+    },
+    {
+      "id": "act_vii_collector_office",
+      "x": 1600,
+      "location": "Deputy Collector's office",
+      "marker": "OFFICE / CASE",
+      "title": "OFFICE DOORS AND PAPER POWER",
+      "line": "At the Deputy Collector's office, petitions, inspectors, and status collide. Men try to manage exposure from earlier night searches and bribes. The route observes paper power without inventing a complete trial outcome for the player to win.",
+      "choices": [
+        "Observe petitions without claiming a courtroom win"
+      ],
+      "response": "Paper can threaten careers; it does not hand the player a full legal resolution in this compact stop."
+    },
+    {
+      "id": "act_vii_saujanya_house",
+      "x": 2550,
+      "location": "Saujanya Rao Pantulu's house",
+      "marker": "HOUSE / LIMIT",
+      "title": "A LIMIT, NOT A TROPHY",
+      "line": "At Saujanya Rao Pantulu's house, counsel and household space close the compact VII route. The adaptation marks a limit: this vertical slice does not award romance, money, or ownership over any woman's future. Ordinary escape stages remain separate.",
+      "choices": [
+        "End without claiming ownership of anyone's future"
+      ],
+      "response": "The story continues beyond this slice. The player leaves without trophies taken from the women in the case."
+    }
+  ]
+}

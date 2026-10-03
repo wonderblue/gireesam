@@ -1,0 +1,81 @@
+{
+  "id": "act_v_rumor_panic",
+  "act": "V",
+  "name_key": "stage.act_v.route.name",
+  "world_width": 3000,
+  "spawn": [
+    160,
+    540
+  ],
+  "goal": [
+    2890,
+    600
+  ],
+  "checkpoint": [
+    160,
+    540
+  ],
+  "grounds": [
+    [
+      [
+        0,
+        620
+      ],
+      [
+        3000,
+        150
+      ]
+    ]
+  ],
+  "platforms": [],
+  "trees": [],
+  "blocks": [],
+  "fish": [],
+  "enemies": [],
+  "required_fish": 0,
+  "story_beats": [
+    {
+      "id": "act_v_bedroom_panic",
+      "x": 600,
+      "location": "Lubdhavadhani's bedroom",
+      "marker": "RUMOR / FEAR",
+      "title": "A RUMOR IS NOT A VERDICT",
+      "line": "In Lubdhavadhani's bedroom, he panics over gossip that the bride was previously married and that a dead first husband will punish him. Minakshi tries to quiet the household and treat the scare as rumor and nightmare rather than settled fact. The comedy sits on his superstition and on men who traffic in fear; it does not treat the woman's past as a joke or a player puzzle to solve.",
+      "choices": [
+        "Separate rumor from verified fact before acting",
+        "Notice who profits when fear spreads",
+        "Keep Minakshi's care visible without making her responsible for the panic"
+      ],
+      "choice_responses": [
+        "A rumor is not a court finding. This episode records the panic without converting gossip into proof.",
+        "Fear travels with the men who sell threats and favors. Naming that trade does not invent the bride's history.",
+        "Minakshi's attempt to calm the house remains hers. The player does not take over her decisions or blame her for the rumor."
+      ],
+      "response": "Choose a reading of fear versus evidence; the woman's status is not a collectible and no verdict is forced here."
+    },
+    {
+      "id": "act_v_temple_search",
+      "x": 1600,
+      "location": "Near the temple gateway",
+      "marker": "BRIBE / SEARCH",
+      "title": "SEARCHING FOR A FAVOR",
+      "line": "Near the temple gateway, Ramappantulu bargains with a head constable over a missing-person scare, bribes, and whose statement will be remembered. The farce stays on police bravado, split money, and men's self-interest. Madhuravani is named as someone who will not open her door for Ramappantulu's comfort; she is not framed as the culprit to catch.",
+      "choices": [
+        "Keep the search about men's schemes, not a hunt that blames Madhuravani"
+      ],
+      "response": "Bribes and threats may move the night along, but they do not authorize treating women as prizes or proof objects."
+    },
+    {
+      "id": "act_v_corridor_claim",
+      "x": 2550,
+      "location": "Lubdhavadhani's house corridor",
+      "marker": "CLAIM / CARE",
+      "title": "CARE WITHOUT A CONFESSION",
+      "line": "Back through Lubdhavadhani's corridor, the household still argues over whether the rumor is true and who should be asked. Minakshi refuses to turn care into a forced confession from the bride. The episode ends without making the player extract a private history or reward Lubdhavadhani's panic as wisdom.",
+      "choices": [
+        "Refuse a forced confession framed as care"
+      ],
+      "response": "Care that demands a confession is still pressure. The route leaves the bride's private history unclaimed by the player."
+    }
+  ]
+}

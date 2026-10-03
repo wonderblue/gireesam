@@ -73,7 +73,7 @@ python3 -m http.server 8080 --directory web-export
 
 ## 📚 Story adaptations
 
-The title screen keeps the standard escape campaign and separate **PLAY ACT I · STORY**, **PLAY ACT II**, **PLAY ACT III**, and **PLAY ACT IV** routes. Act III remains a compact route through four source locations. Act IV is a compact, English-language three-stop episode that audits a forged letter, follows the wedding bargaining, and frames Gireesam's pressured elopement pitch without rewarding it as romance. See the distinct [Act II](./docs/ACT_II_ADAPTATION.md), [Act III](./docs/ACT_III_ADAPTATION.md), and [Act IV](./docs/ACT_IV_ADAPTATION.md) source-witness and adaptation notes.
+The title screen keeps the standard escape campaign and separate **PLAY ACT I · STORY** through **PLAY ACT VII** routes. Acts II–VII are compact English-language episodes grounded in the 1909 Andhra Bharati witness. Act I remains the Bonkula Dibba / Madhuravani room vertical slice (with an optional Telugu UI pilot line). See `docs/ACT_*_ADAPTATION.md` for witness and adaptation notes.
 
 ---
 

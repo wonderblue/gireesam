@@ -1,0 +1,81 @@
+{
+  "id": "act_vi_wedding_reversal",
+  "act": "VI",
+  "name_key": "stage.act_vi.route.name",
+  "world_width": 3000,
+  "spawn": [
+    160,
+    540
+  ],
+  "goal": [
+    2890,
+    600
+  ],
+  "checkpoint": [
+    160,
+    540
+  ],
+  "grounds": [
+    [
+      [
+        0,
+        620
+      ],
+      [
+        3000,
+        150
+      ]
+    ]
+  ],
+  "platforms": [],
+  "trees": [],
+  "blocks": [],
+  "fish": [],
+  "enemies": [],
+  "required_fish": 0,
+  "story_beats": [
+    {
+      "id": "act_vi_agraharam_arrival",
+      "x": 600,
+      "location": "Ramachandrapuram agraharam",
+      "marker": "ARRIVAL / CLAIM",
+      "title": "THE WEDDING ALREADY MOVED",
+      "line": "At Ramachandrapuram, Agnihotravadhani arrives expecting the Lubdhavadhani match for his daughter. Ramappantulu says the wedding already happened with another Guntur match after a letter claimed the connection was unwanted. Agnihotravadhani demands proof. The beat is about competing claims and men's face; Subbi is not treated as a bargain chip the player can reassign.",
+      "choices": [
+        "Treat the letter claim as contested, not settled",
+        "Keep Subbi's future from becoming a player-controlled trade",
+        "Watch who benefits when dates and documents disagree"
+      ],
+      "choice_responses": [
+        "A letter's claim still needs checking. This stop records the clash without inventing a final court ruling.",
+        "Subbi remains a person whose future is at stake. The player cannot reassign her consent or cancel the source plot.",
+        "Confusion over dates and documents is useful to the men managing it. Naming that usefulness is not the same as rewriting the plot."
+      ],
+      "response": "Choose how to read contested claims; the marriage outcome stays with the source plot."
+    },
+    {
+      "id": "act_vi_vizag_lodging",
+      "x": 1600,
+      "location": "Street outside Madhuravani's lodging",
+      "marker": "LODGING / PRESSURE",
+      "title": "VIZAG IS NOT A CLEAN ESCAPE",
+      "line": "Outside Madhuravani's lodging in Visakhapatnam, pressure and reputation travel with the party. The route observes lodging, street talk, and who can open or refuse a door. Madhuravani's boundaries remain hers; the player does not force entry or extract payment from her.",
+      "choices": [
+        "Keep Madhuravani's door and terms hers"
+      ],
+      "response": "Lodging and reputation may move the plot, but they do not hand the player authority over Madhuravani's space."
+    },
+    {
+      "id": "act_vi_saujanya_office",
+      "x": 2550,
+      "location": "Saujanya Rao Pantulu's office",
+      "marker": "COUNSEL / STATUS",
+      "title": "COUNSEL IS ALSO STATUS",
+      "line": "In Saujanya Rao Pantulu's office room, legal counsel and public standing become the next stage of the farce. Advice is useful and self-interested at once. The episode ends without letting the player win a courtroom triumph that the compact adaptation does not stage.",
+      "choices": [
+        "Separate helpful counsel from a fantasy of total control"
+      ],
+      "response": "Counsel can clarify options without granting the player a rewritten ending over the women in the case."
+    }
+  ]
+}
