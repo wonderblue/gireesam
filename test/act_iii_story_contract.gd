@@ -8,6 +8,7 @@ func _initialize() -> void:
 
 func _run() -> void:
 	root.size = Vector2i(1280, 720)
+	root.get_node("I18n").set_locale("en")
 	await process_frame
 	_test_content()
 	var title = load("res://scenes/title_screen.tscn").instantiate()
