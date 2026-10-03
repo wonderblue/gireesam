@@ -1164,6 +1164,8 @@ func _request_touch_attack() -> void:
 func _on_shot_requested(position: Vector2, direction: float) -> void:
 	if finished or resetting or get_tree().paused:
 		return
+	if is_instance_valid(player) and player.story_observer_mode:
+		return
 	TuningStore.apply_boundary("NEXT_SPAWN")
 	if tutorial != null: tutorial.notify("shot")
 	if get_tree().get_nodes_in_group("yarn_projectile").size() >= MAX_YARN_BALLS:
