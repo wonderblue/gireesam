@@ -219,14 +219,15 @@ func build_ui() -> void:
 	actions.add_theme_constant_override("h_separation", 4)
 	actions.add_theme_constant_override("v_separation", 2)
 	body.add_child(actions)
-	var badges := [FeltKit.MUSTARD, FeltKit.TEAL, FeltKit.ROSE, Color("#7a4128"), Color("#9b5d48"), FeltKit.TEAL, FeltKit.MUSTARD]
-	var pairs := [["title.leaderboard", _open_leaderboard], ["settings.title", _open_settings], ["title.tutorial", _replay_tutorial], ["account.title", _open_account], ["title.story_act_i", start_story], ["title.story_act_ii", start_story_act_ii], ["title.story_act_iii", start_story_act_iii]]
+	var badges := [FeltKit.MUSTARD, FeltKit.TEAL, FeltKit.ROSE, Color("#7a4128"), Color("#9b5d48"), FeltKit.TEAL, FeltKit.MUSTARD, FeltKit.ROSE]
+	var pairs := [["title.leaderboard", _open_leaderboard], ["settings.title", _open_settings], ["title.tutorial", _replay_tutorial], ["account.title", _open_account], ["title.story_act_i", start_story], ["title.story_act_ii", start_story_act_ii], ["title.story_act_iii", start_story_act_iii], ["title.story_act_iv", start_story_act_iv]]
 	for index in pairs.size():
 		var pair: Array = pairs[index]
 		var button := _button(pair[0], pair[1])
 		if pair[0] == "title.story_act_i": button.name = "StoryActIButton"
 		if pair[0] == "title.story_act_ii": button.name = "StoryActIIButton"
 		if pair[0] == "title.story_act_iii": button.name = "StoryActIIIButton"
+		if pair[0] == "title.story_act_iv": button.name = "StoryActIVButton"
 		STYLE.menu_item(button)
 		button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		button.custom_minimum_size.y = 44
@@ -556,6 +557,9 @@ func start_story_act_ii() -> void:
 
 func start_story_act_iii() -> void:
 	_launch_game("res://scenes/story_act_iii_game.tscn")
+
+func start_story_act_iv() -> void:
+	_launch_game("res://scenes/story_act_iv_game.tscn")
 
 func _launch_game(scene_path: String) -> void:
 	if starting or get_tree().paused or is_instance_valid(_modal): return
