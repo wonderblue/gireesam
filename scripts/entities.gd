@@ -82,7 +82,7 @@ class Walker:
 	var sprite_grounding := SPRITE_GROUNDING.new()
 	const HITBOX_SIZE := Vector2(52, 26)
 	const HITBOX_OFFSET := Vector2(0, 6)
-	const SPRITE_SIZE := 124.0
+	const SPRITE_SIZE := 60.0
 	var sprite_texture: Texture2D = TEXTURE:
 		set(value):
 			sprite_texture = value
