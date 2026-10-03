@@ -1,1 +1,18 @@
-{"THIRD_PARTY_NOTICES.txt":"sha256:e5fc26384b5725a7c2a4d2eb0c08e7fbe631d2ef294adac01897be94e1af19b7","index.apple-touch-icon.png":"sha256:91bee75988b68b20027fca9905fa75d6bcd389bf5f5b2d9be301e73978b7f256","index.audio.position.worklet.js":"sha256:be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8","index.audio.worklet.js":"sha256:5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3","index.html":"sha256:9c83956d414aa2c493d3d6d699a9eb670276c9e2ce0c8a547da85a269ed2f272","index.icon.png":"sha256:5772c7688b475d7e6494add55af2b00a0a8832bba96066d42d6b9646935ee612","index.js":"sha256:cb28c2d8ffd8981888823f1b6d98cdec4e3e11adf209ad556c22878e6d51c63a","index.pck":"sha256:156decddacef84c0dc506307730308474f0e4bc6b9a582a8840c7bf3419d718e","index.png":"sha256:c8f02392ee13709b5ad038608e2f50d5e7dbacc6e4466b67dbfc5021e8dc8c91","index.wasm":"sha256:fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0","open-source-licenses.html":"sha256:afb688c202c7583525327d4f29338af448d209f338c9063a732b687c4b5bbe92"}
+[
+  ".build-files.json",
+  ".build-fingerprint",
+  "THIRD_PARTY_NOTICES.txt",
+  "index.apple-touch-icon.png",
+  "index.apple-touch-icon.png.import",
+  "index.audio.position.worklet.js",
+  "index.audio.worklet.js",
+  "index.html",
+  "index.icon.png",
+  "index.icon.png.import",
+  "index.js",
+  "index.pck",
+  "index.png",
+  "index.png.import",
+  "index.wasm",
+  "open-source-licenses.html"
+]
