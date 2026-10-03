@@ -271,5 +271,11 @@
 	"story.objective.act6.exit": "ACT VI · Leave with an honest record, not a verdict",
 	"stage.act_vi.route.name": "The record before the verdict",
 	"story.act6.ending": "ACT VI · KEEP THE RECORD HONEST",
-	"story.act6.ending_copy": "The missing-disciple report remains an allegation, and the separate family matters remain distinct. The episode closes with a safe next step, not a verdict."
-	}
+		"story.act6.ending_copy": "The missing-disciple report remains an allegation, and the separate family matters remain distinct. The episode closes with a safe next step, not a verdict.",
+		"title.story_act_vii": "PLAY ACT VII",
+		"story.objective.act7.find": "ACT VII · Audit: {marker}",
+		"story.objective.act7.exit": "ACT VII · Close the unproved file; Buchchamma chooses her future",
+		"stage.act_vii.route.name": "The case and the women's next step",
+		"story.act7.ending": "ACT VII · THE WOMEN CHOOSE WHAT FOLLOWS",
+		"story.act7.ending_copy": "Sowjanya recognizes Madhuravani's protection and rejects Gireesam's claim to reform. The case closes as unsupported in this adaptation, not as an invented 1909 court decree. Buchchamma's education and independent future remain hers; the final scene belongs to Madhuravani, Sowjanya, and Buchchamma."
+		}

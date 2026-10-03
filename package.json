@@ -17,6 +17,7 @@
     "test:act-iv": "godot --headless --audio-driver Dummy --path . --script test/act_iv_story_contract.gd",
     "test:act-v": "godot --headless --audio-driver Dummy --path . --script test/act_v_story_contract.gd",
     "test:act-vi": "godot --headless --audio-driver Dummy --path . --script test/act_vi_story_contract.gd",
+    "test:act-vii": "godot --headless --audio-driver Dummy --path . --script test/act_vii_story_contract.gd",
     "test:checks": "node --test test/exported-pack-profile.test.mjs test/loader-language.test.mjs",
     "test:responsive": "godot --headless --path . --script test/responsive_layout.gd",
     "test:audio": "node scripts/check-audio.mjs",

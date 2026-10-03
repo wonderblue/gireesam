@@ -139,6 +139,9 @@ func objective_text() -> String:
 	elif act == "VI":
 		find_key = "story.objective.act6.find"
 		exit_key = "story.objective.act6.exit"
+	elif act == "VII":
+		find_key = "story.objective.act7.find"
+		exit_key = "story.objective.act7.exit"
 	if stealth_active:
 		return I18n.t("story.objective.hide")
 	var beat := _current_beat()

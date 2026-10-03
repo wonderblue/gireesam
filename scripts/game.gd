@@ -23,6 +23,7 @@ const ACT_III_STORY = preload("res://scripts/act_iii_story.gd")
 const ACT_IV_STORY = preload("res://scripts/act_iv_story.gd")
 const ACT_V_STORY = preload("res://scripts/act_v_story.gd")
 const ACT_VI_STORY = preload("res://scripts/act_vi_story.gd")
+const ACT_VII_STORY = preload("res://scripts/act_vii_story.gd")
 const ACT_I_DIRECTOR = preload("res://scripts/act_i_director.gd")
 const GIREE_TEXTURE = preload("res://assets/gireesam/gireesam_player.png")
 const STAGE_TIME_LIMITS := [110.0, 95.0, 80.0]
@@ -39,6 +40,7 @@ const MIN_JUMP_CLEARANCE := 24.0
 @export var story_act_iv := false
 @export var story_act_v := false
 @export var story_act_vi := false
+@export var story_act_vii := false
 var player: CharacterBody2D
 var camera: Camera2D
 var run_score = RUN_SCORE.new()
@@ -144,6 +146,8 @@ func _load_stage(index: int) -> bool:
 
 func _route_stage_ids() -> Array:
 	if story_mode:
+		if story_act_vii:
+			return ACT_VII_STORY.stage_ids()
 		if story_act_vi:
 			return ACT_VI_STORY.stage_ids()
 		if story_act_v:
@@ -156,6 +160,8 @@ func _route_stage_ids() -> Array:
 	return STAGE_CATALOG.stages()
 
 func _load_story_stage(index: int) -> Dictionary:
+	if story_act_vii:
+		return ACT_VII_STORY.load_stage(index)
 	if story_act_vi:
 		return ACT_VI_STORY.load_stage(index)
 	if story_act_v:
@@ -178,7 +184,9 @@ func _stage_child(node: Node) -> void:
 func build_world() -> void:
 	var art
 	if story_mode:
-		if story_act_vi:
+		if story_act_vii:
+			art = ACT_VII_STORY.LocationArt.new()
+		elif story_act_vi:
 			art = ACT_VI_STORY.LocationArt.new()
 		elif story_act_v:
 			art = ACT_V_STORY.LocationArt.new()
@@ -267,7 +275,7 @@ func add_pipe(pos: Vector2, size: Vector2) -> void:
 func spawn_player(pos: Vector2) -> void:
 	player = PLAYER_SCRIPT.new()
 	player.name = "Player"
-	player.story_observer_mode = story_mode and (story_act_ii or story_act_iii or story_act_iv or story_act_v or story_act_vi)
+	player.story_observer_mode = story_mode and (story_act_ii or story_act_iii or story_act_iv or story_act_v or story_act_vi or story_act_vii)
 	player.add_to_group("player")
 	player.position = pos
 	player.touch_input = touch_input
@@ -963,7 +971,9 @@ func _on_goal_reached() -> void:
 		GameAudio.play(&"success")
 		_finish_run("victory")
 		if story_mode:
-			if story_act_vi:
+			if story_act_vii:
+				show_message(I18n.t("story.act7.ending"), I18n.t("story.act7.ending_copy"))
+			elif story_act_vi:
 				show_message(I18n.t("story.act6.ending"), I18n.t("story.act6.ending_copy"))
 			elif story_act_v:
 				show_message(I18n.t("story.act5.ending"), I18n.t("story.act5.ending_copy"))
