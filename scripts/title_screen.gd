@@ -74,8 +74,12 @@ func _draw() -> void:
 func key_art_rect() -> Rect2:
 	var size := get_viewport_rect().size
 	var texture_size := BACKGROUND.get_size()
-	var art_size := texture_size * minf(size.x / texture_size.x, size.y / texture_size.y)
-	return Rect2((size - art_size) * 0.5, art_size)
+	# Floor scale so float error never pushes art past the viewport edge
+	# (Rect2.encloses rejects tiny negative origins from contain centering).
+	var scale_factor := minf(size.x / texture_size.x, size.y / texture_size.y)
+	var art_size := Vector2(floorf(texture_size.x * scale_factor), floorf(texture_size.y * scale_factor))
+	var origin := Vector2(floorf((size.x - art_size.x) * 0.5), floorf((size.y - art_size.y) * 0.5))
+	return Rect2(origin, art_size)
 
 func _copy(key: String, font_size: int, placeholders: Dictionary = {}) -> Label:
 	var label := STYLE.label(I18n.t(key, placeholders), font_size)
