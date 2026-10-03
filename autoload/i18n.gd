@@ -2,7 +2,7 @@ extends Node
 
 signal locale_changed(locale: String)
 
-const SUPPORTED_LOCALES := ["en"]
+const SUPPORTED_LOCALES := ["en", "zh-CN"]
 const PREFERENCE_PATH := "user://language.cfg"
 var _locale := "en"
 var _catalogs: Dictionary = {}

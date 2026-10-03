@@ -101,11 +101,11 @@ func _run() -> void:
 		return
 	var previous_locale: String = i18n.get_locale()
 	i18n.set_locale("zh-CN")
-	if i18n.t("title.play") != "开始游戏" or i18n.t("hud.score", {"score": "123"}) != "分数\n123":
+	if i18n.t("title.play") != "开始游戏" or i18n.t("hud.score.caption") != "分数" or i18n.t("hud.score", {"score": "123"}) != "123":
 		_fail("exported Chinese title/HUD localization is unavailable")
 		return
 	i18n.set_locale("en")
-	if i18n.t("title.play") != "LET'S PLAY":
+	if i18n.t("title.play") != "START ESCAPE" or i18n.t("hud.score", {"score": "123"}) != "SCORE 123":
 		_fail("exported English title localization is unavailable")
 		return
 	i18n.set_locale(previous_locale)
