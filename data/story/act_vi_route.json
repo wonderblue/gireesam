@@ -1,0 +1,115 @@
+{
+  "id": "act_vi_evidence_chain",
+  "act": "VI",
+  "name_key": "stage.act_vi.route.name",
+  "world_width": 5000,
+  "spawn": [160, 540],
+  "goal": [4890, 600],
+  "checkpoint": [160, 540],
+  "grounds": [
+    [[0, 620], [5000, 150]]
+  ],
+  "platforms": [],
+  "trees": [],
+  "blocks": [],
+  "fish": [],
+  "enemies": [],
+  "required_fish": 0,
+  "story_beats": [
+    {
+      "id": "act_vi_disputed_report",
+      "x": 500,
+      "location": "Ramachandrapuram wedding-party road",
+      "marker": "OBSERVATION / HEARSAY",
+      "title": "A REPORT IS NOT A WITNESS",
+      "line": "Agnihotravadhani and Ramappantulu discover that they have been acting on different marriage arrangements. A complaint then alleges that Gireesam carried off Karataka's disciple and property. The account is hearsay: no witnessed abduction or finding about the disciple is established here.",
+      "choices": [
+        "Record the confused exchange as something directly heard",
+        "Label the carried-off story as hearsay until checked firsthand",
+        "Keep a claim about property separate from proof about a person"
+      ],
+      "choice_responses": [
+        "The disagreement over the arrangements is directly heard; it does not verify the separate allegation.",
+        "The report remains an allegation. No abduction is established by repeating it.",
+        "A reported loss of property cannot establish who was present or what happened to the disciple."
+      ],
+      "response": "The party confusion starts a claim; it does not establish the missing disciple's identity, location, or fate."
+    },
+    {
+      "id": "act_vi_litigation_ledger",
+      "x": 1450,
+      "location": "The litigation and pawn ledger",
+      "marker": "DEBT / BRIBE / FALSE TESTIMONY",
+      "title": "MONEY CAN MOVE A CASE, NOT THE FACTS",
+      "line": "As the dispute turns toward court, Ramappantulu arranges borrowed money and proposes pawning an ancestral bracelet to meet fees. He also urges influence over a witness and a ready-made account. A loan or pawn shows a financial stake; a bribe and coached or false testimony corrupt the record, not strengthen it.",
+      "choices": [
+        "Trace the loan and pawn as expenses, not proof of the allegation",
+        "Log and refuse any payment offered to influence testimony",
+        "Mark a coached account as proposed testimony, not observation"
+      ],
+      "choice_responses": [
+        "The money trail explains who paid and what was pledged; it cannot prove the charge.",
+        "A bribe offer is evidence of pressure on the process, not a reliable witness account.",
+        "A rehearsed or false account must not be entered as something personally observed."
+      ],
+      "response": "Keep debt, property, bribe offers, and testimony in separate columns. None settles the allegation."
+    },
+    {
+      "id": "act_vi_meenakshi_regret",
+      "x": 2400,
+      "location": "Lubdhavadhani's lodging",
+      "marker": "REMORSE / SEPARATE FAMILY MATTER",
+      "title": "A DIFFERENT FAMILY'S REGRET",
+      "line": "In a separate family matter, Lubdhavadhani admits that he regrets selling his own daughter Meenakshi in marriage to an old man. This is his remorse about that arrangement, not evidence about the missing-disciple allegation. The adaptation does not invent Meenakshi's private thoughts or make her a playable objective.",
+      "choices": [
+        "Keep this admission in its own record, separate from the missing-person claim",
+        "Do not turn Meenakshi into a clue, obstacle, or rescue objective",
+        "Leave her perspective unwritten rather than inventing her response"
+      ],
+      "choice_responses": [
+        "Lubdhavadhani's regret concerns a different family matter and cannot identify the missing disciple.",
+        "Meenakshi is not evidence in another person's case and is not a token to be moved.",
+        "The episode records only the source-grounded admission, not an imagined interior account."
+      ],
+      "response": "Meenakshi's story remains distinct from the disputed missing-disciple case."
+    },
+    {
+      "id": "act_vi_madhuravani_safe_route",
+      "x": 3350,
+      "location": "Madhuravani's room",
+      "marker": "PRIVACY / HONEST ACCOUNT",
+      "title": "PROTECTION WITHOUT A SCRIPT",
+      "line": "Madhuravani helps protect Karataka's disciple as adults argue over the case, and presses Karataka toward an honest account instead of a contrived shortcut. The pursuit does not prove an abduction. The disciple's safety and privacy matter; no location is exposed and no testimony is forced.",
+      "choices": [
+        "Wait for a safe, voluntary contact rather than expose the disciple",
+        "Invite an honest firsthand account without coaching or pressure",
+        "Keep the private location out of rumor and paid testimony"
+      ],
+      "choice_responses": [
+        "A safe next step protects the person without pretending the allegation has been resolved.",
+        "An account must come freely from the person who observed the event; no script can substitute.",
+        "Privacy protects the disciple; concealment or payment would not establish the facts."
+      ],
+      "response": "Madhuravani's help protects a person, not a theory. The case remains open to an honest account."
+    },
+    {
+      "id": "act_vi_sowjanya_counsel",
+      "x": 4300,
+      "location": "Sowjanya Rao's consultation room",
+      "marker": "REFORM / EDUCATION / PROPERTY",
+      "title": "COUNSEL WITHOUT A BRIBE",
+      "line": "Sowjanya refuses payment meant to influence the case. She argues for reform, education, care, and a daughter's right to receive the property held for her benefit. Her counsel concerns Agnihotravadhani's household; it neither proves nor resolves the separate missing-disciple allegation.",
+      "choices": [
+        "Refuse a private payment and keep reform support transparent",
+        "Record the daughter's property separately and protect her access to it",
+        "Let an honest inquiry test the allegation; do not barter care for a verdict"
+      ],
+      "choice_responses": [
+        "Sowjanya will not trade legal help for money; public reform support is a separate matter.",
+        "Property belongs in the daughter's own account and is not evidence about the missing disciple.",
+        "Care and a fair inquiry are not bargaining chips, and no verdict is chosen here."
+      ],
+      "response": "The episode ends with a cleaner record and a safer next step, not a verdict or a later-act resolution."
+    }
+  ]
+}
