@@ -20,6 +20,7 @@ const MENU_MODAL = preload("res://scripts/menu_modal.gd")
 const ACT_I_STORY = preload("res://scripts/act_i_story.gd")
 const ACT_II_STORY = preload("res://scripts/act_ii_story.gd")
 const ACT_III_STORY = preload("res://scripts/act_iii_story.gd")
+const ACT_IV_STORY = preload("res://scripts/act_iv_story.gd")
 const ACT_I_DIRECTOR = preload("res://scripts/act_i_director.gd")
 const GIREE_TEXTURE = preload("res://assets/gireesam/gireesam_player.png")
 const STAGE_TIME_LIMITS := [110.0, 95.0, 80.0]
@@ -33,6 +34,7 @@ const MIN_JUMP_CLEARANCE := 24.0
 @export var story_mode := false
 @export var story_act_ii := false
 @export var story_act_iii := false
+@export var story_act_iv := false
 var player: CharacterBody2D
 var camera: Camera2D
 var run_score = RUN_SCORE.new()
@@ -138,12 +140,16 @@ func _load_stage(index: int) -> bool:
 
 func _route_stage_ids() -> Array:
 	if story_mode:
+		if story_act_iv:
+			return ACT_IV_STORY.stage_ids()
 		if story_act_iii:
 			return ACT_III_STORY.stage_ids()
 		return ACT_II_STORY.stage_ids() if story_act_ii else ACT_I_STORY.stage_ids()
 	return STAGE_CATALOG.stages()
 
 func _load_story_stage(index: int) -> Dictionary:
+	if story_act_iv:
+		return ACT_IV_STORY.load_stage(index)
 	if story_act_iii:
 		return ACT_III_STORY.load_stage(index)
 	if story_act_ii:
@@ -160,7 +166,9 @@ func _stage_child(node: Node) -> void:
 func build_world() -> void:
 	var art
 	if story_mode:
-		if story_act_iii:
+		if story_act_iv:
+			art = ACT_IV_STORY.LocationArt.new()
+		elif story_act_iii:
 			art = ACT_III_STORY.LocationArt.new()
 		elif story_act_ii:
 			art = ACT_II_STORY.LocationArt.new()
@@ -243,7 +251,7 @@ func add_pipe(pos: Vector2, size: Vector2) -> void:
 func spawn_player(pos: Vector2) -> void:
 	player = PLAYER_SCRIPT.new()
 	player.name = "Player"
-	player.story_observer_mode = story_mode and (story_act_ii or story_act_iii)
+	player.story_observer_mode = story_mode and (story_act_ii or story_act_iii or story_act_iv)
 	player.add_to_group("player")
 	player.position = pos
 	player.touch_input = touch_input
@@ -939,7 +947,9 @@ func _on_goal_reached() -> void:
 		GameAudio.play(&"success")
 		_finish_run("victory")
 		if story_mode:
-			if story_act_iii:
+			if story_act_iv:
+				show_message(I18n.t("story.act4.ending"), I18n.t("story.act4.ending_copy"))
+			elif story_act_iii:
 				show_message(I18n.t("story.act3.ending"), I18n.t("story.act3.ending_copy"))
 			elif story_act_ii:
 				show_message(I18n.t("story.act2.ending"), I18n.t("story.act2.ending_copy"))
