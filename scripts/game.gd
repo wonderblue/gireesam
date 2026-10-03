@@ -779,6 +779,15 @@ func _open_dialogue(stage_id: int, story_data: Dictionary = {}) -> void:
 	copy.add_theme_font_size_override("font_size", 21)
 	copy.add_theme_color_override("font_color", MENU_STYLE.INK)
 	content.add_child(copy)
+	var telugu_line_text := str(data.get("telugu_line", ""))
+	if story_mode and not telugu_line_text.is_empty():
+		var telugu_line := MENU_STYLE.label(telugu_line_text, 24)
+		telugu_line.name = "TeluguPilotLine"
+		telugu_line.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		telugu_line.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		telugu_line.add_theme_font_override("font", MENU_STYLE.MEDIUM)
+		telugu_line.add_theme_color_override("font_color", MENU_STYLE.INK)
+		body.add_child(telugu_line)
 	var prompt := MENU_STYLE.label(I18n.t("story.dialogue.tag") if story_mode else "WHICH ARGUMENT WILL OPEN THE WAY?", 16)
 	prompt.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	prompt.add_theme_color_override("font_color", MENU_STYLE.MUTED)
