@@ -17,6 +17,8 @@ const RUN_SCORE = preload("res://scripts/run_score.gd")
 const TUTORIAL = preload("res://scripts/tutorial_director.gd")
 const MENU_STYLE = preload("res://scripts/menu_style.gd")
 const MENU_MODAL = preload("res://scripts/menu_modal.gd")
+const ACT_I_STORY = preload("res://scripts/act_i_story.gd")
+const ACT_I_DIRECTOR = preload("res://scripts/act_i_director.gd")
 const GIREE_TEXTURE = preload("res://assets/gireesam/gireesam_player.png")
 const STAGE_TIME_LIMITS := [110.0, 95.0, 80.0]
 
@@ -26,6 +28,7 @@ const BASE_VIEWPORT_HEIGHT := 720.0
 const REFERENCE_MAX_PLATFORM_RISE := 150.0
 const MIN_JUMP_CLEARANCE := 24.0
 
+@export var story_mode := false
 var player: CharacterBody2D
 var camera: Camera2D
 var run_score = RUN_SCORE.new()
@@ -67,11 +70,19 @@ var _best_at_start := 0
 var checkpoint_effect_shown := false
 var chase_audio_cooldown := 0.0
 var configured_enemy_count := -1
+var act_i = null
+var story_interact_button: Button
+var active_story_dialogue: Dictionary = {}
 
 func _ready() -> void:
 	_best_at_start = SaveStore.best_score()
 	run_score.begin()
 	TuningStore.begin_run()
+	if story_mode:
+		act_i = ACT_I_DIRECTOR.new()
+		act_i.name = "ActIDirector"
+		act_i.dialogue_requested.connect(_open_story_dialogue)
+		add_child(act_i)
 	if not _load_stage(0):
 		show_message(I18n.t("stage.error.title"), I18n.t("stage.error.body"))
 		return
@@ -88,7 +99,8 @@ func _ready() -> void:
 	tutorial = TUTORIAL.new()
 	tutorial.name = "TutorialDirector"
 	add_child(tutorial)
-	tutorial.begin()
+	if not story_mode:
+		tutorial.begin()
 	pause_menu = PAUSE_MENU.new()
 	pause_menu.name = "PauseMenu"
 	pause_menu.main_menu_requested.connect(return_to_main_menu)
@@ -99,10 +111,10 @@ func _ready() -> void:
 	GameAudio.begin_game()
 
 func _load_stage(index: int) -> bool:
-	var registry: Array = STAGE_CATALOG.stages()
+	var registry: Array = _route_stage_ids()
 	if index < 0 or index >= registry.size():
 		return false
-	var definition: Dictionary = STAGE_CATALOG.load_stage(str(registry[index]))
+	var definition: Dictionary = ACT_I_STORY.load_stage(index) if story_mode else STAGE_CATALOG.load_stage(str(registry[index]))
 	if definition.is_empty():
 		return false
 	stage_index = index
@@ -112,7 +124,12 @@ func _load_stage(index: int) -> bool:
 	stage_start_x = checkpoint.x
 	TuningStore.apply_boundary("NEXT_STAGE")
 	configured_enemy_count = -1
+	if story_mode and act_i != null:
+		act_i.begin(self, stage)
 	return true
+
+func _route_stage_ids() -> Array:
+	return ACT_I_STORY.stage_ids() if story_mode else STAGE_CATALOG.stages()
 
 func _point(value: Array) -> Vector2:
 	return Vector2(float(value[0]), float(value[1]))
@@ -122,9 +139,11 @@ func _stage_child(node: Node) -> void:
 	add_child(node)
 
 func build_world() -> void:
-	var art = WORLD_ART.new()
+	var art = ACT_I_STORY.LocationArt.new() if story_mode else WORLD_ART.new()
 	art.name = "WorldArt"
 	art.world_width = world_width
+	if story_mode:
+		art.location_id = str(stage.id)
 	_stage_child(art)
 	for entry: Array in stage.grounds:
 		add_ground(_point(entry[0]), _point(entry[1]))
@@ -139,7 +158,8 @@ func build_world() -> void:
 		_stage_child(block)
 	for point: Array in stage.fish:
 		spawn_coin(_point(point))
-	_spawn_distractions()
+	if not story_mode:
+		_spawn_distractions()
 	_rebuild_enemies()
 	var goal = ENTITIES.GoalFlag.new()
 	goal.position = _point(stage.goal)
@@ -436,6 +456,22 @@ func build_hud() -> void:
 	attack_button.add_theme_constant_override("line_spacing", -2)
 	attack_button.pressed.connect(_request_touch_attack)
 	hud_root.add_child(attack_button)
+	story_interact_button = Button.new()
+	story_interact_button.name = "StoryInteractButton"
+	story_interact_button.text = I18n.t("story.button.listen")
+	story_interact_button.tooltip_text = I18n.t("story.button.listen")
+	story_interact_button.accessibility_name = I18n.t("story.button.listen")
+	story_interact_button.set_anchors_and_offsets_preset(Control.PRESET_CENTER_BOTTOM)
+	story_interact_button.offset_left = -122
+	story_interact_button.offset_top = -86
+	story_interact_button.offset_right = 122
+	story_interact_button.offset_bottom = -16
+	_style_round_button(story_interact_button, Color("#f4dda9"), Color("#a76545"), Color("#5d382c"))
+	story_interact_button.add_theme_font_override("font", MENU_STYLE.BOLD)
+	story_interact_button.add_theme_font_size_override("font_size", 15)
+	story_interact_button.pressed.connect(_request_story_interact)
+	story_interact_button.visible = false
+	hud_root.add_child(story_interact_button)
 	_add_mouse_controls()
 	get_viewport().size_changed.connect(_layout_hud)
 	_layout_hud()
@@ -497,7 +533,15 @@ func _fit_hud_height() -> void:
 
 func _sync_touch_controls() -> void:
 	var active := is_inside_tree() and not get_tree().paused and not finished and not resetting
-	if is_instance_valid(attack_button): attack_button.visible = active
+	if is_instance_valid(attack_button): attack_button.visible = active and not story_mode
+	if is_instance_valid(story_interact_button):
+		story_interact_button.visible = active and story_mode and act_i != null and act_i.can_interact()
+		if story_mode and act_i != null:
+			if act_i.stealth_active:
+				story_interact_button.text = I18n.t("story.button.peek") if player.story_hidden else I18n.t("story.button.hide")
+			else:
+				story_interact_button.text = I18n.t("story.button.listen")
+			story_interact_button.accessibility_name = story_interact_button.text
 	for mouse_control in get_tree().get_nodes_in_group("mouse_controls"):
 		mouse_control.visible = active
 	if is_instance_valid(touch_input):
@@ -526,6 +570,13 @@ func _process(delta: float) -> void:
 	run_score.tick(delta)
 	if tutorial != null and absf(player.global_position.x - stage_start_x) > 60.0:
 		tutorial.notify("moved")
+	if story_mode and act_i != null:
+		act_i.tick(delta)
+		if Input.is_action_just_pressed("interact"):
+			_request_story_interact()
+		if is_instance_valid(route_label):
+			route_label.text = _objective_text()
+		_sync_touch_controls()
 	if camera != null:
 		camera.position_smoothing_speed = TuningStore.get_value("camera_smoothing")
 	time_left = maxf(time_left - delta, 0.0)
@@ -539,7 +590,7 @@ func _process(delta: float) -> void:
 	if time_left <= 0.0:
 		_on_time_up()
 		return
-	if not checkpoint_effect_shown and player.global_position.x >= float(stage.checkpoint[0]):
+	if not story_mode and not checkpoint_effect_shown and player.global_position.x >= float(stage.checkpoint[0]):
 		checkpoint_effect_shown = true
 		GameAudio.play(&"checkpoint")
 		checkpoint = _point(stage.checkpoint)
@@ -569,6 +620,8 @@ func _accept_game_event() -> bool:
 func _objective_text() -> String:
 	if stage.is_empty():
 		return ""
+	if story_mode and act_i != null:
+		return act_i.objective_text()
 	var stage_name := I18n.t(str(stage.name_key))
 	if int(stage.required_fish) > 0:
 		return I18n.t("stage.objective.fish", {"stage": stage_name, "count": mini(coins, int(stage.required_fish)), "target": int(stage.required_fish)})
@@ -670,9 +723,17 @@ func _dialogue_data(stage_id: int) -> Dictionary:
 	]
 	return scenes[clampi(stage_id, 0, scenes.size() - 1)]
 
-func _open_dialogue(stage_id: int) -> void:
+func _open_story_dialogue(data: Dictionary) -> void:
+	_open_dialogue(stage_index, data)
+
+func _request_story_interact() -> void:
+	if story_mode and act_i != null and act_i.can_interact():
+		act_i.interact()
+
+func _open_dialogue(stage_id: int, story_data: Dictionary = {}) -> void:
 	if dialogue_layer != null or finished or resetting: return
-	var data := _dialogue_data(stage_id)
+	var data := story_data if story_mode else _dialogue_data(stage_id)
+	active_story_dialogue = data.duplicate(true) if story_mode else {}
 	dialogue_layer = CanvasLayer.new()
 	dialogue_layer.name = "GireesamDialogue"
 	dialogue_layer.layer = 60
@@ -695,18 +756,20 @@ func _open_dialogue(stage_id: int) -> void:
 	var body := VBoxContainer.new()
 	body.add_theme_constant_override("separation", 12)
 	panel.add_child(body)
-	var title := MENU_STYLE.ribbon(str(data.title), 30, FeltKit.TEAL)
+	var title_text := ("ADAPTED SCENE · " if story_mode else "") + str(data.title)
+	var title := MENU_STYLE.ribbon(title_text, 30, FeltKit.TEAL)
 	body.add_child(title)
 	var content := HBoxContainer.new()
 	content.add_theme_constant_override("separation", 20)
 	body.add_child(content)
-	var portrait := TextureRect.new()
-	portrait.texture = GIREE_TEXTURE
-	portrait.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-	portrait.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-	portrait.custom_minimum_size = Vector2(245, 245)
-	portrait.size_flags_vertical = Control.SIZE_SHRINK_CENTER
-	content.add_child(portrait)
+	if not story_mode:
+		var portrait := TextureRect.new()
+		portrait.texture = GIREE_TEXTURE
+		portrait.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		portrait.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		portrait.custom_minimum_size = Vector2(245, 245)
+		portrait.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+		content.add_child(portrait)
 	var copy := Label.new()
 	copy.text = str(data.line)
 	copy.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
@@ -716,7 +779,7 @@ func _open_dialogue(stage_id: int) -> void:
 	copy.add_theme_font_size_override("font_size", 21)
 	copy.add_theme_color_override("font_color", MENU_STYLE.INK)
 	content.add_child(copy)
-	var prompt := MENU_STYLE.label("WHICH ARGUMENT WILL OPEN THE WAY?", 16)
+	var prompt := MENU_STYLE.label(I18n.t("story.dialogue.tag") if story_mode else "WHICH ARGUMENT WILL OPEN THE WAY?", 16)
 	prompt.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	prompt.add_theme_color_override("font_color", MENU_STYLE.MUTED)
 	body.add_child(prompt)
@@ -724,7 +787,8 @@ func _open_dialogue(stage_id: int) -> void:
 	choices.add_theme_constant_override("separation", 8)
 	body.add_child(choices)
 	for choice in data.choices:
-		var button := MENU_STYLE.button(str(choice.text), false)
+		var choice_text := str(choice) if story_mode else str(choice.text)
+		var button := MENU_STYLE.button(choice_text, false)
 		button.custom_minimum_size.y = 52
 		button.add_theme_font_size_override("font_size", 18)
 		button.pressed.connect(_choose_dialogue.bind(stage_id, choices.get_child_count()))
@@ -735,6 +799,18 @@ func _open_dialogue(stage_id: int) -> void:
 
 func _choose_dialogue(stage_id: int, choice_index: int) -> void:
 	if dialogue_layer == null: return
+	if story_mode:
+		var response: String = act_i.resolve_choice(choice_index)
+		var story_layer := dialogue_layer
+		dialogue_layer = null
+		active_story_dialogue = {}
+		story_layer.queue_free()
+		get_tree().paused = false
+		if is_instance_valid(player): player.clear_input()
+		update_hud()
+		route_label.text = response
+		_sync_touch_controls()
+		return
 	var data := _dialogue_data(stage_id)
 	var selected: Dictionary = data.choices[clampi(choice_index, 0, data.choices.size() - 1)]
 	reputation = clampi(reputation + int(selected.delta), 0, 100)
@@ -742,7 +818,10 @@ func _choose_dialogue(stage_id: int, choice_index: int) -> void:
 	if time_bonus > 0.0:
 		var bonus_stage := clampi(stage_id, 0, STAGE_TIME_LIMITS.size() - 1)
 		var stage_time_cap := minf(configured_level_time, float(STAGE_TIME_LIMITS[bonus_stage]))
-		time_left = minf(time_left + time_bonus, stage_time_cap)
+		var boosted_time := time_left + time_bonus
+		if time_left <= stage_time_cap:
+			boosted_time = minf(boosted_time, stage_time_cap)
+		time_left = maxf(time_left, boosted_time)
 	var response := str(selected.after)
 	var layer := dialogue_layer
 	dialogue_layer = null
@@ -790,6 +869,12 @@ func _on_time_up() -> void:
 func _on_goal_reached() -> void:
 	if not _accept_game_event():
 		return
+	if story_mode and act_i != null and not act_i.can_clear_scene():
+		if not goal_hint_shown:
+			goal_hint_shown = true
+			GameAudio.play(&"invalid")
+		route_label.text = _objective_text()
+		return
 	if coins < int(stage.required_fish):
 		if not goal_hint_shown:
 			goal_hint_shown = true
@@ -801,17 +886,24 @@ func _on_goal_reached() -> void:
 	update_hud()
 	_freeze_stage()
 	visual_effects.spawn_finish_confetti(player.global_position + Vector2(0, -90))
-	if stage_index + 1 < STAGE_CATALOG.stages().size():
+	if stage_index + 1 < _route_stage_ids().size():
 		GameAudio.play(&"stage_clear")
-		var next_definition: Dictionary = STAGE_CATALOG.load_stage(STAGE_CATALOG.stages()[stage_index + 1])
-		show_message(I18n.t("result.stage_clear"), I18n.t("result.stage_summary", {"stage": I18n.t(stage.name_key), "score": score, "reputation": reputation, "next": I18n.t(str(next_definition.get("name_key", "stage.error.title")))}))
+		var next_definition: Dictionary = ACT_I_STORY.load_stage(stage_index + 1) if story_mode else STAGE_CATALOG.load_stage(str(_route_stage_ids()[stage_index + 1]))
+		if story_mode:
+			show_message(I18n.t("story.stage_clear"), I18n.t("story.stage_summary", {"stage": I18n.t(stage.name_key), "next": I18n.t(str(next_definition.get("name_key", "stage.error.title")))}))
+		else:
+			show_message(I18n.t("result.stage_clear"), I18n.t("result.stage_summary", {"stage": I18n.t(stage.name_key), "score": score, "reputation": reputation, "next": I18n.t(str(next_definition.get("name_key", "stage.error.title")))}))
 	else:
 		GameAudio.play(&"success")
 		_finish_run("victory")
-		show_message(I18n.t("result.victory"), I18n.t("result.summary", {"score": score, "duration": ceili(run_score.duration), "reputation": reputation}))
+		if story_mode:
+			show_message(I18n.t("story.act1.ending"), I18n.t("story.act1.ending_copy"))
+		else:
+			show_message(I18n.t("result.victory"), I18n.t("result.summary", {"score": score, "duration": ceili(run_score.duration), "reputation": reputation}))
 
 func _finish_run(outcome: String) -> void:
-	SaveStore.update_campaign_progress(stage_index + 1 if outcome == "victory" else stage_index, reputation)
+	if not story_mode:
+		SaveStore.update_campaign_progress(stage_index + 1 if outcome == "victory" else stage_index, reputation)
 	terminal_result = run_score.finalize(str(stage.id), outcome, not TuningStore.is_run_tainted(), TuningStore.get_run_config())
 	SaveStore.record_run(terminal_result)
 	CloudProfile.sync_now()
@@ -947,7 +1039,7 @@ func show_message(title: String, subtitle: String) -> void:
 		box.add_child(gap)
 	var first_button: Button
 	if terminal:
-		if finished and terminal_result.is_empty() and stage_index + 1 < STAGE_CATALOG.stages().size():
+		if finished and terminal_result.is_empty() and stage_index + 1 < _route_stage_ids().size():
 			first_button = _result_button(box, "result.next_stage", next_stage)
 		else:
 			first_button = _result_button(box, "result.play_again", restart_run)

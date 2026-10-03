@@ -227,5 +227,19 @@
   "account.guest": "LOCAL PLAYER",
   "account.login": "SIGN IN WITH MANUS",
   "account.sync": "SYNC NOW",
-  "account.logout": "SIGN OUT"
+  "account.logout": "SIGN OUT",
+  "title.story_act_i": "PLAY ACT I · STORY",
+  "story.button.listen": "LISTEN / ACT\nE",
+  "story.button.hide": "HIDE / WAIT\nE",
+  "story.button.peek": "PEEK / RE-HIDE\nE",
+  "story.dialogue.tag": "ADAPTED STORY BEAT · CHOICES DO NOT CHANGE SCORE OR REPUTATION",
+  "story.prompt.interact": "E · {marker}",
+  "story.prompt.stealth": "KEEP HIDDEN · E TO PEEK",
+  "story.objective.find": "ACT I · Find: {marker}",
+  "story.objective.hide": "ACT I · Stay under the bed until the search passes",
+  "story.objective.exit": "ACT I · Reach the scene's exit",
+  "story.stage_clear": "SCENE CHANGE",
+  "story.stage_summary": "{stage} complete.\nNext: {next}",
+  "story.act1.ending": "ACT I · MADHURAVANI SETS THE TERMS",
+  "story.act1.ending_copy": "The scene closes on Madhuravani's decision. This is a focused Act I adaptation, not the full play."
 }
