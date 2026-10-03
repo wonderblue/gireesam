@@ -18,6 +18,7 @@ const TUTORIAL = preload("res://scripts/tutorial_director.gd")
 const MENU_STYLE = preload("res://scripts/menu_style.gd")
 const MENU_MODAL = preload("res://scripts/menu_modal.gd")
 const ACT_I_STORY = preload("res://scripts/act_i_story.gd")
+const ACT_II_STORY = preload("res://scripts/act_ii_story.gd")
 const ACT_I_DIRECTOR = preload("res://scripts/act_i_director.gd")
 const GIREE_TEXTURE = preload("res://assets/gireesam/gireesam_player.png")
 const STAGE_TIME_LIMITS := [110.0, 95.0, 80.0]
@@ -29,6 +30,7 @@ const REFERENCE_MAX_PLATFORM_RISE := 150.0
 const MIN_JUMP_CLEARANCE := 24.0
 
 @export var story_mode := false
+@export var story_act_ii := false
 var player: CharacterBody2D
 var camera: Camera2D
 var run_score = RUN_SCORE.new()
@@ -114,7 +116,11 @@ func _load_stage(index: int) -> bool:
 	var registry: Array = _route_stage_ids()
 	if index < 0 or index >= registry.size():
 		return false
-	var definition: Dictionary = ACT_I_STORY.load_stage(index) if story_mode else STAGE_CATALOG.load_stage(str(registry[index]))
+	var definition: Dictionary
+	if story_mode:
+		definition = ACT_II_STORY.load_stage(index) if story_act_ii else ACT_I_STORY.load_stage(index)
+	else:
+		definition = STAGE_CATALOG.load_stage(str(registry[index]))
 	if definition.is_empty():
 		return false
 	stage_index = index
@@ -129,7 +135,9 @@ func _load_stage(index: int) -> bool:
 	return true
 
 func _route_stage_ids() -> Array:
-	return ACT_I_STORY.stage_ids() if story_mode else STAGE_CATALOG.stages()
+	if story_mode:
+		return ACT_II_STORY.stage_ids() if story_act_ii else ACT_I_STORY.stage_ids()
+	return STAGE_CATALOG.stages()
 
 func _point(value: Array) -> Vector2:
 	return Vector2(float(value[0]), float(value[1]))
@@ -139,7 +147,11 @@ func _stage_child(node: Node) -> void:
 	add_child(node)
 
 func build_world() -> void:
-	var art = ACT_I_STORY.LocationArt.new() if story_mode else WORLD_ART.new()
+	var art
+	if story_mode:
+		art = ACT_II_STORY.LocationArt.new() if story_act_ii else ACT_I_STORY.LocationArt.new()
+	else:
+		art = WORLD_ART.new()
 	art.name = "WorldArt"
 	art.world_width = world_width
 	if story_mode:
@@ -215,6 +227,7 @@ func add_pipe(pos: Vector2, size: Vector2) -> void:
 func spawn_player(pos: Vector2) -> void:
 	player = PLAYER_SCRIPT.new()
 	player.name = "Player"
+	player.story_observer_mode = story_mode and story_act_ii
 	player.add_to_group("player")
 	player.position = pos
 	player.touch_input = touch_input
@@ -897,7 +910,11 @@ func _on_goal_reached() -> void:
 	visual_effects.spawn_finish_confetti(player.global_position + Vector2(0, -90))
 	if stage_index + 1 < _route_stage_ids().size():
 		GameAudio.play(&"stage_clear")
-		var next_definition: Dictionary = ACT_I_STORY.load_stage(stage_index + 1) if story_mode else STAGE_CATALOG.load_stage(str(_route_stage_ids()[stage_index + 1]))
+		var next_definition: Dictionary
+		if story_mode:
+			next_definition = ACT_II_STORY.load_stage(stage_index + 1) if story_act_ii else ACT_I_STORY.load_stage(stage_index + 1)
+		else:
+			next_definition = STAGE_CATALOG.load_stage(str(_route_stage_ids()[stage_index + 1]))
 		if story_mode:
 			show_message(I18n.t("story.stage_clear"), I18n.t("story.stage_summary", {"stage": I18n.t(stage.name_key), "next": I18n.t(str(next_definition.get("name_key", "stage.error.title")))}))
 		else:
@@ -906,7 +923,10 @@ func _on_goal_reached() -> void:
 		GameAudio.play(&"success")
 		_finish_run("victory")
 		if story_mode:
-			show_message(I18n.t("story.act1.ending"), I18n.t("story.act1.ending_copy"))
+			if story_act_ii:
+				show_message(I18n.t("story.act2.ending"), I18n.t("story.act2.ending_copy"))
+			else:
+				show_message(I18n.t("story.act1.ending"), I18n.t("story.act1.ending_copy"))
 		else:
 			show_message(I18n.t("result.victory"), I18n.t("result.summary", {"score": score, "duration": ceili(run_score.duration), "reputation": reputation}))
 
