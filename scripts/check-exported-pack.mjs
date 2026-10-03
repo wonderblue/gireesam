@@ -44,10 +44,13 @@ const contentsProbe = resolve(runDirectory, 'exported_pack_contents.gd')
 const requiredDirectoryLines = ['scenes', 'scripts']
   .map((directory) => `\t${JSON.stringify(`res://${directory}`)},`)
   .join('\n')
+const requiredFileLines = ['assets/template/fonts/telugu/OFL.txt']
+  .map((file) => `\t${JSON.stringify(`res://${file}`)},`)
+  .join('\n')
 const directoryLines = excludedDirectories.map((directory) => `\t${JSON.stringify(`res://${directory}`)},`).join('\n')
 writeFileSync(
   contentsProbe,
-  `extends SceneTree\n\nconst REQUIRED_DIRECTORIES := [\n${requiredDirectoryLines}\n]\nconst EXCLUDED_DIRECTORIES := [\n${directoryLines}\n]\n\nfunc _initialize() -> void:\n\tfor directory in REQUIRED_DIRECTORIES:\n\t\tif not DirAccess.dir_exists_absolute(directory):\n\t\t\tpush_error("[PCK_CONTENTS_FAIL] pack not mounted or required directory missing: " + directory)\n\t\t\tquit(1)\n\t\t\treturn\n\tfor directory in EXCLUDED_DIRECTORIES:\n\t\tif DirAccess.dir_exists_absolute(directory):\n\t\t\tpush_error("[PCK_CONTENTS_FAIL] excluded directory present: " + directory)\n\t\t\tquit(1)\n\t\t\treturn\n\tprint("[PCK_CONTENTS_PASS] required directories present and excluded directories absent")\n\tquit(0)\n`,
+  `extends SceneTree\n\nconst REQUIRED_DIRECTORIES := [\n${requiredDirectoryLines}\n]\nconst REQUIRED_FILES := [\n${requiredFileLines}\n]\nconst EXCLUDED_DIRECTORIES := [\n${directoryLines}\n]\n\nfunc _initialize() -> void:\n\tfor directory in REQUIRED_DIRECTORIES:\n\t\tif not DirAccess.dir_exists_absolute(directory):\n\t\t\tpush_error("[PCK_CONTENTS_FAIL] pack not mounted or required directory missing: " + directory)\n\t\t\tquit(1)\n\t\t\treturn\n\tfor file in REQUIRED_FILES:\n\t\tif not FileAccess.file_exists(file):\n\t\t\tpush_error("[PCK_CONTENTS_FAIL] required file missing: " + file)\n\t\t\tquit(1)\n\t\t\treturn\n\tfor directory in EXCLUDED_DIRECTORIES:\n\t\tif DirAccess.dir_exists_absolute(directory):\n\t\t\tpush_error("[PCK_CONTENTS_FAIL] excluded directory present: " + directory)\n\t\t\tquit(1)\n\t\t\treturn\n\tprint("[PCK_CONTENTS_PASS] required directories/files present and excluded directories absent")\n\tquit(0)\n`,
 )
 
 const checks = [
