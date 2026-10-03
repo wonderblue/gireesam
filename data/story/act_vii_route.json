@@ -1,31 +1,13 @@
 {
-  "id": "act_vii_reckoning",
+  "id": "act_vii_case_resolution",
   "act": "VII",
   "name_key": "stage.act_vii.route.name",
-  "world_width": 3000,
-  "spawn": [
-    160,
-    540
-  ],
-  "goal": [
-    2890,
-    600
-  ],
-  "checkpoint": [
-    160,
-    540
-  ],
+  "world_width": 5000,
+  "spawn": [160, 540],
+  "goal": [4890, 600],
+  "checkpoint": [160, 540],
   "grounds": [
-    [
-      [
-        0,
-        620
-      ],
-      [
-        3000,
-        150
-      ]
-    ]
+    [[0, 620], [5000, 150]]
   ],
   "platforms": [],
   "trees": [],
@@ -35,47 +17,101 @@
   "required_fish": 0,
   "story_beats": [
     {
-      "id": "act_vii_street_fraud",
-      "x": 600,
-      "location": "Street in Visakhapatnam",
-      "marker": "STREET / FRAUD",
-      "title": "HOLY MEN AND UNPAID BILLS",
-      "line": "On a Visakhapatnam street, a bairagi troupe performs holiness while a shopkeeper chases unpaid toddy debts, and gossip names a village case about a girl and false witnesses. The satire sits on fraud, rumor, and men's panic about careers. The missing girl is not a collectible the player can recover for points.",
+      "id": "act_vii_contested_filing",
+      "x": 500,
+      "location": "The deputy collector's case desk",
+      "marker": "FILE / ALLEGATION",
+      "title": "A CHARGE IS NOT A FINDING",
+      "line": "The filing mixes a supposed missing girl with a disputed property claim after confused wedding arrangements. Its missing-person story is an allegation: the complaint lacks a verified identity, residence, and firsthand account. Keep the reported property out of the same evidentiary column until its owner, chain, and record are shown.",
       "choices": [
-        "Keep the joke on fraud and career panic, not on the missing girl",
-        "Treat street gossip as gossip",
-        "Refuse to turn a legal scare into a rescue fantasy"
+        "Record the office discussion as directly heard",
+        "Keep the missing-person story in the allegation column",
+        "Require an identified witness and itemized property record"
       ],
       "choice_responses": [
-        "Comedy belongs to unpaid bills and borrowed holiness. The girl's safety is not a punchline.",
-        "Gossip may point at a case without proving it. This stop does not invent a verdict.",
-        "A compact episode can show pressure without letting the player stage a heroic recovery the source does not grant here."
+        "The conflicting arrangements were heard in the office; that does not prove a girl or property was taken.",
+        "A repeated charge stays an allegation until reliable evidence supports it.",
+        "Without a named witness and traceable property record, the filing cannot stand as a finding."
       ],
-      "response": "Choose how to read street noise; the case remains larger than this route."
+      "response": "Procedure starts with particulars, not a verdict. The confused report and property claim remain contested."
     },
     {
-      "id": "act_vii_collector_office",
-      "x": 1600,
-      "location": "Deputy Collector's office",
-      "marker": "OFFICE / CASE",
-      "title": "OFFICE DOORS AND PAPER POWER",
-      "line": "At the Deputy Collector's office, petitions, inspectors, and status collide. Men try to manage exposure from earlier night searches and bribes. The route observes paper power without inventing a complete trial outcome for the player to win.",
+      "id": "act_vii_testimony_register",
+      "x": 1450,
+      "location": "The witness and evidence register",
+      "marker": "OBSERVATION / HEARSAY / PRESSURE",
+      "title": "SORT THE EVIDENCE, NOT THE PEOPLE",
+      "line": "Keep four entries distinct: what a witness directly observed; what was heard from someone else; testimony shaped by payment, threats, or coaching; and claims invented to fill a gap. Polishetty says the supposed wall-crossing was not something he saw and describes pressure to repeat a story. Gavarayya refuses to pass an invented spirit claim off as proof. None of those compromised accounts establishes the charge.",
       "choices": [
-        "Observe petitions without claiming a courtroom win"
+        "File only a witness's own sight or hearing as direct observation",
+        "Mark a report repeated from another person as hearsay",
+        "Flag payment, threats, or a coached script as compromised testimony",
+        "Set aside an invented claim as fabrication, not corroboration"
       ],
-      "response": "Paper can threaten careers; it does not hand the player a full legal resolution in this compact stop."
+      "choice_responses": [
+        "Direct observation belongs in its own row, with the witness and circumstances identified.",
+        "Hearsay records what was repeated, not what the witness personally saw.",
+        "Bribed or coached testimony is evidence of pressure on the process, not proof of the allegation.",
+        "A fabricated claim cannot corroborate another claim merely by being repeated."
+      ],
+      "response": "A statement is not reliable because it is written down. The record must preserve how each account was obtained."
     },
     {
-      "id": "act_vii_saujanya_house",
-      "x": 2550,
-      "location": "Saujanya Rao Pantulu's house",
-      "marker": "HOUSE / LIMIT",
-      "title": "A LIMIT, NOT A TROPHY",
-      "line": "At Saujanya Rao Pantulu's house, counsel and household space close the compact VII route. The adaptation marks a limit: this vertical slice does not award romance, money, or ownership over any woman's future. Ordinary escape stages remain separate.",
+      "id": "act_vii_separate_family_records",
+      "x": 2400,
+      "location": "Separate household marriage records",
+      "marker": "DISTINCT FAMILY MATTERS",
+      "title": "DO NOT MERGE THE FAMILY FILES",
+      "line": "Agnihotravadhani's separate marriage bargain concerns his daughter Subbi. Lubdhavadhani's regret concerns selling his own daughter Meenakshi in marriage to an older man. Those are distinct family matters, not explanations for the missing-person claim. Neither daughter is a clue, prize, obstacle, or mission object in this case.",
       "choices": [
-        "End without claiming ownership of anyone's future"
+        "Keep Agnihotravadhani's bargain over Subbi in its own record",
+        "Keep Lubdhavadhani's regret about Meenakshi separate",
+        "Do not turn either daughter into evidence or an objective"
       ],
-      "response": "The story continues beyond this slice. The player leaves without trophies taken from the women in the case."
+      "choice_responses": [
+        "Subbi's separate marriage bargain cannot identify the person named in the complaint.",
+        "Meenakshi's father's regret is not testimony about the disputed missing-person case.",
+        "A daughter is not a clue, prize, or obstacle to be moved by this case file."
+      ],
+      "response": "The records stay separate: Subbi's bargain, Meenakshi's father's regret, and the missing-person allegation are not interchangeable."
+    },
+    {
+      "id": "act_vii_disciple_identified",
+      "x": 3350,
+      "location": "Madhuravani's protected disclosure",
+      "marker": "VOLUNTARY IDENTIFICATION",
+      "title": "IDENTITY, WITHOUT SPECTACLE",
+      "line": "Madhuravani gives a voluntary, uncoached account: the supposed missing girl and bride is Karataka Śāstri's male disciple in disguise. The disciple is not Meenakshi or Buchchamma. This is a person misidentified by the dispute, not a punchline, mission object, prize, or obstacle. Record the identity without exposing a private location; keep the disputed property claim on its own evidentiary track.",
+      "choices": [
+        "Take Madhuravani's account voluntarily and without public exposure",
+        "Record Karataka Śāstri's disciple as the person identified",
+        "Keep the property claim separate from the identity finding"
+      ],
+      "choice_responses": [
+        "Madhuravani's account is recorded on her terms, without a forced or rehearsed statement.",
+        "The person sought is the male disciple in disguise, not Meenakshi or Buchchamma.",
+        "An identity disclosure does not establish who owned or moved the disputed property."
+      ],
+      "response": "The firsthand identification resolves who the supposed missing bride is. It does not turn the separate property claim into proof."
+    },
+    {
+      "id": "act_vii_women_choose_future",
+      "x": 4300,
+      "location": "Sowjanya Rao's consultation room",
+      "marker": "EDUCATION / INDEPENDENCE",
+      "title": "BUCCHAMMA'S FUTURE IS HERS",
+      "line": "Sowjanya recognizes that Madhuravani protected the disciple and gave an honest account. She rejects Gireesam's self-serving claim to reform and tells him to stay away from Buchchamma's future. Sowjanya supports Buchchamma's education and independence: Buchchamma will choose for herself whether, when, and whom to marry. The three women discuss their next steps; the scene ends on their agency, not Gireesam.",
+      "choices": [
+        "Record Sowjanya's recognition of Madhuravani's protection",
+        "Respect Sowjanya's refusal of Gireesam's approach",
+        "Back Buchchamma's education and self-chosen future"
+      ],
+      "choice_responses": [
+        "Madhuravani's protection is acknowledged without trading it for a reward or a private bargain.",
+        "Gireesam does not earn access to Buchchamma through charm, deception, or a claim of reform.",
+        "Buchchamma's education and independent future belong to Buchchamma to decide."
+      ],
+      "response": "The inquiry closes as unsupported on this episode's evidence, not as an invented historical decree. Madhuravani, Sowjanya, and Buchchamma leave with Buchchamma's education and future in her own hands."
     }
   ]
 }

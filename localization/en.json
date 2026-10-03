@@ -265,17 +265,17 @@
   "title.story_act_vii": "PLAY ACT VII",
   "stage.act_v.route.name": "Rumor is not a verdict",
   "stage.act_vi.route.name": "A wedding already moved",
-  "stage.act_vii.route.name": "Street fraud and paper power",
+  "stage.act_vii.route.name": "The case and the women's next step",
   "story.act5.ending": "ACT V COMPLETE",
   "story.act5.ending_copy": "The compact Act V episode ends without turning rumor into a verdict over anyone's past.",
   "story.act6.ending": "ACT VI COMPLETE",
   "story.act6.ending_copy": "The compact Act VI episode ends without reassigning Subbi's future or Madhuravani's door.",
-  "story.act7.ending": "ACT VII COMPLETE",
-  "story.act7.ending_copy": "The compact Act VII episode ends without trophies taken from the women in the case.",
+  "story.act7.ending": "ACT VII · THE WOMEN CHOOSE WHAT FOLLOWS",
+  "story.act7.ending_copy": "Sowjanya recognizes Madhuravani's protection and rejects Gireesam's claim to reform. The case closes as unsupported in this adaptation, not as an invented 1909 court decree. Buchchamma's education and independent future remain hers; the final scene belongs to Madhuravani, Sowjanya, and Buchchamma.",
   "story.objective.act5.find": "ACT V · Attend to: {marker}",
   "story.objective.act5.exit": "ACT V · Leave without forcing a confession from rumor",
   "story.objective.act6.find": "ACT VI · Attend to: {marker}",
   "story.objective.act6.exit": "ACT VI · Leave contested claims unresolved",
-  "story.objective.act7.find": "ACT VII · Attend to: {marker}",
-  "story.objective.act7.exit": "ACT VII · Leave without claiming ownership of anyone's future"
+  "story.objective.act7.find": "ACT VII · Audit: {marker}",
+  "story.objective.act7.exit": "ACT VII · Close the unproved file; Buchchamma chooses her future"
 }

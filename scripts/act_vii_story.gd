@@ -1,8 +1,8 @@
 extends RefCounted
-## Compact Act VII route catalog; all English scene copy is adaptation, not quotation.
+## Compact Act VII finale catalog; English copy is an original adaptation, not quotation.
 
 const STAGE_CATALOG := preload("res://scripts/stage_catalog.gd")
-const STAGE_ID := "act_vii_reckoning"
+const STAGE_ID := "act_vii_case_resolution"
 const PATH := "res://data/story/act_vii_route.json"
 const SOURCE_WITNESS := "1909 second-edition first printing"
 const SOURCE_URLS := [
@@ -11,14 +11,22 @@ const SOURCE_URLS := [
 	"https://andhrabharati.com/nATakamulu/kanyASulkamu/73.html",
 	"https://andhrabharati.com/nATakamulu/kanyASulkamu/74.html",
 	"https://andhrabharati.com/nATakamulu/kanyASulkamu/75.html",
-	"https://andhrabharati.com/nATakamulu/kanyASulkamu/76.html",
+	"https://andhrabharati.com/nATakamulu/kanyASulkamu/76.html"
 ]
 const LOCATIONS := [
-	"Street in Visakhapatnam",
-	"Deputy Collector's office",
-	"Saujanya Rao Pantulu's house",
+	"The deputy collector's case desk",
+	"The witness and evidence register",
+	"Separate household marriage records",
+	"Madhuravani's protected disclosure",
+	"Sowjanya Rao's consultation room"
 ]
-const MARKERS := ["STREET / FRAUD", "OFFICE / CASE", "HOUSE / LIMIT"]
+const MARKERS := [
+	"FILE / ALLEGATION",
+	"OBSERVATION / HEARSAY / PRESSURE",
+	"DISTINCT FAMILY MATTERS",
+	"VOLUNTARY IDENTIFICATION",
+	"EDUCATION / INDEPENDENCE"
+]
 
 static func stage_ids() -> Array:
 	return [STAGE_ID]
@@ -73,7 +81,7 @@ static func validate_stage(stage: Dictionary) -> bool:
 		previous_x = float(beat.x)
 		ids.append(beat.id)
 		locations.append(beat.location)
-	return locations == LOCATIONS and multi_choice_count == 1 and beats[0].choices.size() == 3
+	return locations == LOCATIONS and multi_choice_count == LOCATIONS.size()
 
 
 class LocationArt:
@@ -81,64 +89,73 @@ class LocationArt:
 
 	const FONT := preload("res://assets/template/fonts/ui_bold.tres")
 	var location_id := ""
-	var world_width := 3000.0
+	var world_width := 5000.0
 
 	func _draw() -> void:
 		draw_rect(Rect2(0, -240, world_width, 860), Color("#d8c59e"), true)
-		var wall_colors := [Color("#c98965"), Color("#bd8064"), Color("#78906a")]
+		var wall_colors := [Color("#806b56"), Color("#6b7475"), Color("#88715b"), Color("#625969"), Color("#667668")]
+		var floor_colors := [Color("#71584b"), Color("#68584d"), Color("#80674c"), Color("#594c4b"), Color("#536354")]
 		for zone in range(LOCATIONS.size()):
 			var x := float(zone * 1000)
 			draw_rect(Rect2(x, -180, 1000, 600), wall_colors[zone], true)
-			draw_rect(Rect2(x, 420, 1000, 200), Color("#a76c50") if zone < 2 else Color("#9b795b"), true)
-			_draw_location_sign(x + 84.0, LOCATIONS[zone].to_upper())
+			draw_rect(Rect2(x, 420, 1000, 200), floor_colors[zone], true)
+			_draw_sign(x + 82.0, LOCATIONS[zone].to_upper())
 			_draw_marker(x + 500.0, MARKERS[zone])
-			if zone == 0:
-				_draw_window(x + 760.0, 190.0)
-				_draw_table(x + 500.0, 520.0)
-			elif zone == 1:
-				_draw_canopy(x + 500.0)
-				_draw_seat(x + 500.0, 590.0)
-			else:
-				_draw_window(x + 760.0, 190.0)
-				_draw_lesson_board(x + 500.0, 330.0)
-		draw_line(Vector2(1000, -180), Vector2(1000, 620), Color("#684638", 0.55), 4.0)
-		draw_line(Vector2(2000, -180), Vector2(2000, 620), Color("#684638", 0.55), 4.0)
+			match zone:
+				0:
+					_draw_docket(x + 500.0, 310.0)
+				1:
+					_draw_register(x + 500.0, 300.0)
+				2:
+					_draw_two_ledgers(x + 500.0, 300.0)
+				3:
+					_draw_screen(x + 500.0, 300.0)
+				4:
+					_draw_open_book(x + 500.0, 300.0)
+		for boundary in range(1, LOCATIONS.size()):
+			draw_line(Vector2(boundary * 1000, -180), Vector2(boundary * 1000, 620), Color("#503d35", 0.55), 4.0)
 
-	func _draw_location_sign(x: float, text: String) -> void:
-		draw_rect(Rect2(x, 70, 820, 62), Color("#664735"), true)
-		draw_rect(Rect2(x + 7, 77, 806, 48), Color("#efd2a1"), true)
-		draw_string(FONT, Vector2(x + 18, 108), text, HORIZONTAL_ALIGNMENT_LEFT, 780, 17, Color("#5b392c"))
-
-	func _draw_window(x: float, y: float) -> void:
-		draw_rect(Rect2(x - 95, y - 90, 190, 190), Color("#674638"), true)
-		draw_rect(Rect2(x - 82, y - 77, 164, 164), Color("#70817b"), true)
-		draw_rect(Rect2(x - 6, y - 77, 12, 164), Color("#e2bd8e"), true)
-		draw_rect(Rect2(x - 82, y - 6, 164, 12), Color("#e2bd8e"), true)
-
-	func _draw_table(x: float, y: float) -> void:
-		draw_rect(Rect2(x - 130, y - 12, 260, 22), Color("#684535"), true)
-		draw_rect(Rect2(x - 108, y + 10, 18, 78), Color("#684535"), true)
-		draw_rect(Rect2(x + 90, y + 10, 18, 78), Color("#684535"), true)
-
-	func _draw_canopy(center_x: float) -> void:
-		draw_line(Vector2(center_x - 310, 395), Vector2(center_x - 230, 150), Color("#69483b"), 10.0)
-		draw_line(Vector2(center_x + 310, 395), Vector2(center_x + 230, 150), Color("#69483b"), 10.0)
-		draw_line(Vector2(center_x - 230, 150), Vector2(center_x + 230, 150), Color("#69483b"), 10.0)
-		draw_colored_polygon(PackedVector2Array([Vector2(center_x - 230, 150), Vector2(center_x, 75), Vector2(center_x + 230, 150)]), Color("#dfb878"))
-
-	func _draw_seat(center_x: float, floor_y: float) -> void:
-		draw_rect(Rect2(center_x - 100, floor_y - 56, 200, 18), Color("#684535"), true)
-		for leg_x in [center_x - 78, center_x + 60]:
-			draw_rect(Rect2(leg_x, floor_y - 38, 18, 72), Color("#684535"), true)
-
-	func _draw_lesson_board(center_x: float, y: float) -> void:
-		draw_rect(Rect2(center_x - 145, y - 80, 290, 160), Color("#684735"), true)
-		draw_rect(Rect2(center_x - 132, y - 67, 264, 134), Color("#728064"), true)
-		draw_line(Vector2(center_x - 92, y - 23), Vector2(center_x + 82, y - 23), Color("#f0dfb9"), 3.0)
-		draw_line(Vector2(center_x - 92, y + 15), Vector2(center_x + 48, y + 15), Color("#f0dfb9"), 3.0)
+	func _draw_sign(x: float, text: String) -> void:
+		draw_rect(Rect2(x, 65, 825, 66), Color("#563d32"), true)
+		draw_rect(Rect2(x + 7, 72, 811, 52), Color("#f1dcba"), true)
+		draw_string(FONT, Vector2(x + 16, 104), text, HORIZONTAL_ALIGNMENT_LEFT, 790, 16, Color("#49352e"))
 
 	func _draw_marker(x: float, text: String) -> void:
 		draw_circle(Vector2(x, 548), 9.0, Color("#f6d38c"))
-		draw_line(Vector2(x, 555), Vector2(x, 587), Color("#674233"), 3.0)
-		draw_rect(Rect2(x - 140, 474, 280, 32), Color(0.25, 0.14, 0.1, 0.88), true)
-		draw_string(FONT, Vector2(x - 132, 496), text, HORIZONTAL_ALIGNMENT_CENTER, 264, 12, Color("#fff0d0"))
+		draw_line(Vector2(x, 555), Vector2(x, 585), Color("#563d32"), 3.0)
+		draw_rect(Rect2(x - 205, 474, 410, 34), Color(0.22, 0.15, 0.12, 0.9), true)
+		draw_string(FONT, Vector2(x - 196, 497), text, HORIZONTAL_ALIGNMENT_CENTER, 392, 12, Color("#fff0d0"))
+
+	func _draw_docket(x: float, y: float) -> void:
+		draw_rect(Rect2(x - 138, y - 95, 276, 190), Color("#ead7b4"), true)
+		draw_rect(Rect2(x - 148, y - 105, 276, 190), Color("#bc9562"), false, 5.0)
+		for row in range(5):
+			draw_line(Vector2(x - 100, y - 55 + row * 27), Vector2(x + 94 - (row % 2) * 34, y - 55 + row * 27), Color("#80614c"), 3.0)
+
+	func _draw_register(x: float, y: float) -> void:
+		draw_rect(Rect2(x - 210, y - 75, 420, 150), Color("#e6d3ae"), true)
+		for row in range(4):
+			draw_line(Vector2(x - 190, y - 43 + row * 34), Vector2(x + 190, y - 43 + row * 34), Color("#94755c"), 2.0)
+		draw_line(Vector2(x - 70, y - 70), Vector2(x - 70, y + 69), Color("#94755c"), 2.0)
+		draw_line(Vector2(x + 68, y - 70), Vector2(x + 68, y + 69), Color("#94755c"), 2.0)
+
+	func _draw_two_ledgers(x: float, y: float) -> void:
+		for offset in [-130.0, 130.0]:
+			draw_rect(Rect2(x + offset - 94, y - 70, 188, 140), Color("#ead7b4"), true)
+			for row in range(3):
+				draw_line(Vector2(x + offset - 68, y - 38 + row * 32), Vector2(x + offset + 70 - row * 12, y - 38 + row * 32), Color("#80614c"), 2.0)
+
+	func _draw_screen(x: float, y: float) -> void:
+		draw_line(Vector2(x - 120, y - 75), Vector2(x - 120, y + 75), Color("#523f37"), 7.0)
+		draw_line(Vector2(x + 120, y - 75), Vector2(x + 120, y + 75), Color("#523f37"), 7.0)
+		draw_line(Vector2(x - 120, y - 75), Vector2(x + 120, y - 75), Color("#523f37"), 7.0)
+		for fold_x in [-72.0, -24.0, 24.0, 72.0]:
+			draw_line(Vector2(x + fold_x, y - 62), Vector2(x + fold_x, y + 72), Color("#d9ac75"), 8.0)
+
+	func _draw_open_book(x: float, y: float) -> void:
+		draw_colored_polygon(PackedVector2Array([Vector2(x, y - 80), Vector2(x - 180, y - 52), Vector2(x - 180, y + 78), Vector2(x, y + 50)]), Color("#f0dfbd"))
+		draw_colored_polygon(PackedVector2Array([Vector2(x, y - 80), Vector2(x + 180, y - 52), Vector2(x + 180, y + 78), Vector2(x, y + 50)]), Color("#ead3aa"))
+		draw_line(Vector2(x, y - 78), Vector2(x, y + 50), Color("#8f684d"), 4.0)
+		for row in range(3):
+			draw_line(Vector2(x - 144, y - 18 + row * 25), Vector2(x - 28, y - 18 + row * 25), Color("#977c5c"), 2.0)
+			draw_line(Vector2(x + 28, y - 18 + row * 25), Vector2(x + 144, y - 18 + row * 25), Color("#977c5c"), 2.0)
