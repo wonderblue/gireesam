@@ -1,1 +1,6 @@
-sha256:306beae43443addbdd57537b6a6cdad701ffa75f2ae3fc3947d4c9ac1539002a
+{
+  "pck_sha256": "f59acb401936396db5be5f3c2bb0fdb3bc2851dc851e92d5e477a9e5cc7178dd",
+  "pck_bytes": 17238832,
+  "includes_act_iii": true,
+  "includes_act_ii": true
+}
