@@ -121,15 +121,23 @@ func can_clear_scene() -> bool:
 func objective_text() -> String:
 	if stage.is_empty():
 		return ""
-	var act_two := str(stage.get("act", "")) == "II"
+	var act := str(stage.get("act", "I"))
+	var find_key := "story.objective.find"
+	var exit_key := "story.objective.exit"
+	if act == "II":
+		find_key = "story.objective.act2.find"
+		exit_key = "story.objective.act2.exit"
+	elif act == "III":
+		find_key = "story.objective.act3.find"
+		exit_key = "story.objective.act3.exit"
 	if stealth_active:
 		return I18n.t("story.objective.hide")
 	var beat := _current_beat()
 	if not beat.is_empty():
 		if str(beat.id) == "room_search_accident":
 			return I18n.t("story.objective.hide")
-		return I18n.t("story.objective.act2.find" if act_two else "story.objective.find", {"marker": str(beat.marker)})
-	return I18n.t("story.objective.act2.exit" if act_two else "story.objective.exit")
+		return I18n.t(find_key, {"marker": str(beat.marker)})
+	return I18n.t(exit_key)
 
 func _current_beat() -> Dictionary:
 	_skip_unavailable_beats()
